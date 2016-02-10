@@ -15,7 +15,8 @@
 * */
 function checkWin () {
     //var matchFound = false;
-    //var lineCheck = false;
+    var lineCheck = false;
+    //  these assume gama area is square
     var rows = gameArea.length;
     var cols = gameArea[0].length;
     //
@@ -24,22 +25,52 @@ function checkWin () {
     //  go through the array line by line
     for (var i =0; i < rows; i++)
     {
-        if (gameArea[i][0] == gameArea[i][1] == gameArea[i][2])
+        /*if (gameArea[i][0] == gameArea[i][1] == gameArea[i][2])
         {
             return gameArea[i][0];
-        }
-        /*//  go through each row item by item
+        }*/
+
+        //the line matches unless two items aren't the same
+        lineCheck = true;
+        //  go through each row item by item
         for (var j =1; j < cols; j++)
         {
-
-        }*/
+            //loop through until something does not match
+            if (gameArea[i][j-1] != gameArea[i][j])
+            {
+                // mismatch found, line does not match, try next line
+                lineCheck = false;
+                break;
+            }
+        }
+        //if no mismatches found, whole line matches, match found, return to
+        if (lineCheck) {
+            return gameArea[i][j-1];
+        }
     }
 
     //VERTICAL CHECK
     //  go through the array column by column
     for (var i = 0; i < rows; i++) {
-        if (gameArea[0][i] == gameArea[1][i] == gameArea[2][i]) {
+        /*if (gameArea[0][i] == gameArea[1][i] == gameArea[2][i]) {
             return gameArea[0][i];
+        }*/
+        //the line matches unless two items aren't the same
+        lineCheck = true;
+        //  go through each row item by item
+        for (var j =1; j < cols; j++)
+        {
+            //loop through until something does not match
+            if (gameArea[j-1][i] != gameArea[j][i])
+            {
+                // mismatch found, line does not match, try next line
+                lineCheck = false;
+                break;
+            }
+        }
+        //if no mismatches found, whole line matches, match found, return to
+        if (lineCheck) {
+            return gameArea[i][j-1];
         }
     }
 
