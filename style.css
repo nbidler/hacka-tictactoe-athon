@@ -23,3 +23,16 @@
     height:auto;
     transform:rotate(270deg) scaleX(-1);
 }
+.x{
+    height:50px;
+    width:50px;
+    background-image: url("images/x.jpg");
+    background-size:contain;
+}
+.o{
+    height:50px;
+    width:50px;
+    background-image: url("images/o.jpg");
+    background-size:contain;
+
+}
