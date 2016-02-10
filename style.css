@@ -28,11 +28,12 @@
     width:50px;
     background-image: url("images/x.jpg");
     background-size:contain;
+    transition:1s;
 }
 .o{
     height:50px;
     width:50px;
     background-image: url("images/o.jpg");
     background-size:contain;
-
+    transition:1s;
 }
