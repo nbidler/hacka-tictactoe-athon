@@ -1,0 +1,16 @@
+#stat_display{
+    position:relative;
+    top:70vh;
+}
+#stat_box{
+    box-sizing: border-box;
+    border:5px solid black;
+
+}
+#stat_box > div{
+    text-align: center;
+    height:20vh;
+}
+#div{
+    border:1px solid red;
+}
