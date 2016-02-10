@@ -6,3 +6,8 @@ var gameArea = [
     [],
     []
 ];
+
+var x = null;
+var o = null;
+
+

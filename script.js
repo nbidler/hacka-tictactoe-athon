@@ -1,14 +1,23 @@
-/**
- * Created by jaisonamos on 2/10/16.
- */
 
 $(document).ready(function () {
-    $(".back").click(function () {
+    $(".square").click(function () {
         console.log(this);
-        (this);
+        $(this).addClass('x');
+        div_clicked;
+
 
     });
-
-
-
 });
+
+
+
+
+function div_clicked(a,b){
+    if (x==null){
+        x= a;
+    }
+    else {
+        y =b;
+
+    }
+}
