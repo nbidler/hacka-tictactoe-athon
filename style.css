@@ -22,12 +22,16 @@ body{
     width: 33%;
     height: 100%;
     display: inline-block;
-    background-color: #FF8E0F;
+    background-color: #FFE800;
 }
-
 
 
 .x {
     background-color: blue;
+}
+
+
+.o {
+    background-color: red;
 }
 
