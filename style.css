@@ -1,0 +1,33 @@
+body{
+    background-color: black;
+}
+
+.maincontainer {
+    width:90%;
+    height: 90vh;
+    margin-top: 2%;
+    background-color: black;
+}
+
+.squarerow {
+    width: 80%;
+    height: 33%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .5%;
+}
+
+.square {
+    border: 3px solid black;
+    width: 33%;
+    height: 100%;
+    display: inline-block;
+    background-color: #FF8E0F;
+}
+
+
+
+.x {
+    background-color: blue;
+}
+
