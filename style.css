@@ -2,14 +2,14 @@ body{
     background-color: black;
 }
 
-.container {
+.maincontainer {
     width:90%;
     height: 90vh;
     margin-top: 2%;
     background-color: black;
 }
 
-.row {
+.squarerow {
     width: 80%;
     height: 33%;
     margin-left: auto;

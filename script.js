@@ -2,22 +2,23 @@
 $(document).ready(function () {
     $(".square").click(function () {
         console.log(this);
-        $(this).addClass('x');
-        div_clicked;
-
-
+        $(this).addClass(player);
+        square_clicked(player);
+        console.log("player:"+player);
     });
 });
 
 
 
 
-function div_clicked(a,b){
-    if (x==null){
-        x= a;
+function square_clicked(a){
+
+    if (player=='x'){
+        player = 'o';
     }
     else {
-        y =b;
+        player= "x";
 
     }
+    console.log("player:"+player);
 }
