@@ -11,3 +11,7 @@ var gameAreaSize= 3;
 var player = 'x';
 
 var anarchyMode = 0;
+
+var player1wins = 0;
+var player2wins = 0;
+var tiewins = 0;

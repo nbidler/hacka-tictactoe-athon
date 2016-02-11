@@ -16,7 +16,19 @@ $(document).ready(function () {
         addToIndex($(this).attr('id'), player);//store the location of the click into your storage variable
         console.log("player:"+player);
 
-        //checkWin();//check for win
+        //checkWin();//check for win and increment the stat counters
+        if (checkWin() == 'w'){
+            if (player == 'x'){
+                player1wins++;
+                $('.player_1_stat h2').text(player1wins);
+            } else {
+                player2wins++;
+                $('.player_2_stat h2').text(player2wins);
+            }
+        } else if (checkWin() == 't'){
+            tiewins++;
+            $('.tie_stats').text(tiewins);
+        }
         console.log('checked win '+ checkWin());
         square_clicked(player);//toggle the player to the next one after processing the click
 
