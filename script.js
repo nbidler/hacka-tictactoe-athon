@@ -10,7 +10,7 @@ $(document).ready(function () {
 
         if (anarchyMode) // if anarchyMode is not 0
         {
-            if
+
             // 65% chance to take over clicked
             if (Math.random() < 0.64)
             {
@@ -27,9 +27,9 @@ $(document).ready(function () {
         }// otherwise, anarchyMode is off and continue as normal
         else {
             if ($(this).hasClass('x') || $(this).hasClass('o')) {
-                $('.square_occupied').show();
+                $('.square_occupied').effect('drop');
                 setTimeout(function () {
-                    $('.square_occupied').hide();
+                    $('.square_occupied').effect('drop');
                 }, 1500);
                 console.log("already clicked");
                 return;
@@ -44,16 +44,16 @@ $(document).ready(function () {
         if (gameResult == 'w'){
             if (player == 'x'){
                 player1wins++;
-                $('.player_1_stat h2').text(player1wins).effect('highlight');
+                $('.player_1_stat h2').text(player1wins).effect('highlight').effect('highlight');
                 won = 1;
             } else {
                 player2wins++;
-                $('.player_2_stat h2').text(player2wins).effect('highlight');
+                $('.player_2_stat h2').text(player2wins).effect('highlight').effect('highlight');
                 won = 1;
             }
         } else if (gameResult == 't'){
             tiewins++;
-            $('.tie_stats h2').text(tiewins).effect('highlight');
+            $('.tie_stats h2').text(tiewins).effect('highlight').effect('highlight');
 
             won = 1;
         }

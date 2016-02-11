@@ -41,7 +41,7 @@ body{
     width: 20vw;
     height: 25vh;
     transform-style: preserve-3d;
-    transition-duration: 2s;
+    transition-duration: 1s;
 }
 .square5 {
     border: 3px solid black;
