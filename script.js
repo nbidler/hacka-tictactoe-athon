@@ -3,6 +3,7 @@ $(document).ready(function () {
         console.log(this);
         $(this).addClass(player);
         square_clicked(player);
+        addToIndex($(this).attr('id'), player)
         console.log("player:"+player);
 
         if (($(this).hasClass('o') || ($(this).hasClass('x'))){
