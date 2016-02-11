@@ -1,9 +1,9 @@
 $(document).ready(function(){
-    $('.player_1_stat  button').click(function(){
-        $('.x-test').addClass('x');
-    });
+   // $('.square').click(function(){
+   //     $(this).addClass('x');
+    //});
 
-    $('.player_2_stat  button').click(function(){
-        $('.o-test').addClass('o');
+    $('.square').click(function(){
+        $(this).addClass('o');
     })
 });
