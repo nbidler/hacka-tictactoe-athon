@@ -5,7 +5,7 @@
 
 /*
 * checkWin
-* 0 params, 1 return - 'x' X wins, 'o' O wins, ' ' tie
+* 0 params, 1 return - player who just moved won, false - continue playing
 * reads from global array gameArea
 *
 * WIN CONDITIONS -
@@ -45,7 +45,7 @@ function checkWin () {
         }
         //if no mismatches found, whole line matches, match found, return to
         if (lineCheck) {
-            return gameArea[i][j-1];
+            return true;
         }
     }
 
@@ -70,7 +70,7 @@ function checkWin () {
         }
         //if no mismatches found, whole line matches, match found, return to
         if (lineCheck) {
-            return gameArea[i][j-1];
+            return true;
         }
     }
 
@@ -85,7 +85,7 @@ function checkWin () {
             break;
         }
         if (lineCheck) {
-            return gameArea[i][i];
+            return true;
         }
     }
 
@@ -106,11 +106,21 @@ function checkWin () {
         }
         //if no mismatches found, whole line matches, match found, return to
         if (lineCheck) {
-            return gameArea[i][j];
+            return true;
         }
     }
 
+    /*
+    * SOMEHOW
+    * USE isNaN TO DETERMINE IF ANY NUMBERS LEFT
+    * IF ANY NUMBERS LEFT, NOT END OF GAME
+    * IF NO NUMBERS LEFT, END OF GAME WITH TIE
+    * RETURNS TRUE IF PREVIOUS MOVE WON THE GAME
+    * RETURNS FALSE IF GAME CONTINUES
+    * RETURNS NULL IF TIE? MAYBE?
+    * */
 
+    //if no player has made winning move, continue
+    return false;
     //if all possibilities checked and no match, game was tie
-    return 'T';
 }
