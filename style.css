@@ -99,7 +99,8 @@ body{
     position:absolute;
     border-radius:50%;
     right:0;
-    background-color:red;
+    background-color:darkcyan;
+    color:white;
     z-index:1;
     text-align:center;
     display:none;

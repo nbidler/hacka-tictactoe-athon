@@ -223,15 +223,15 @@ $(document).ready(function () {
 function square_clicked(a){
     if (player=='x'){
         player = 'o';
-        $('.player2_turn').show('explode');
-        $('.player1_turn').hide('explode');
+        $('.player2_turn').show('clip');
+        $('.player1_turn').hide('clip');
         var player1 = new Audio('Audio/player1.wav');
         player1.play();
     }
     else {
         player = 'x';
-        $('.player1_turn').show('explode');
-        $('.player2_turn').hide('explode');
+        $('.player1_turn').show('clip');
+        $('.player2_turn').hide('clip');
         var player2 = new Audio('Audio/player2.wav');
         player2.play();
 
