@@ -1,6 +1,6 @@
 $(document).ready(function () {
     console.log('doc loaded');
-    $(".square").click(function () {
+    $(".square3, .square5").click(function () {
         if ($(this).hasClass('x') || $(this).hasClass('o')){
             console.log("already clicked");
             return;
@@ -25,6 +25,7 @@ $(document).ready(function () {
     });
     //this checks if the user wants to be on a 3x3 or 5x5 game board, it also changes the gameArea array size
     $('#3x3').click(function(){
+        gameAreaSize = 3;
         $('.game_board3').css('display','block');
         $('.game_board5').css('display','none');
         gameArea = [
@@ -35,6 +36,7 @@ $(document).ready(function () {
     });
 
     $('#5x5').click(function(){
+        gameAreaSize = 5;
         $('.game_board3').css('display','none');
         $('.game_board5').css('display','block');
         gameArea = [
@@ -60,11 +62,22 @@ function square_clicked(a){
 //this is the reset function that resets the x and o classes and resets the gameArea Array
 function reset(){
     console.log('reset recieved');
-    $('.square').removeClass('x o');
-    gameArea = [
-        ['1', '2', '3'],
-        ['4', '5', '6'],
-        ['7', '8', '9']
-    ];
+    $('.square3, .square5').removeClass('x o');
+    if(gameAreaSize == 3){
+        gameArea = [
+            ['1', '2', '3'],
+            ['4', '5', '6'],
+            ['7', '8', '9']
+        ];
+    } else if(gameAreaSize==5){
+        gameArea = [
+            ['1', '2', '3', '4', '5'],
+            ['6','7', '8', '9', '10'],
+            ['11','12', '13', '14', '15'],
+            ['16','17', '18', '19', '20'],
+            ['21','22', '23', '24', '25']
+        ];
+    }
+
 }
 
