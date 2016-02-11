@@ -26,16 +26,16 @@ $(document).ready(function () {
         if (gameResult == 'w'){
             if (player == 'x'){
                 player1wins++;
-                $('.player_1_stat h2').text(player1wins);
+                $('.player_1_stat h2').text(player1wins).effect('highlight');
                 won = 1;
             } else {
                 player2wins++;
-                $('.player_2_stat h2').text(player2wins);
+                $('.player_2_stat h2').text(player2wins).effect('highlight');
                 won = 1;
             }
         } else if (gameResult == 't'){
             tiewins++;
-            $('.tie_stats h2').text(tiewins);
+            $('.tie_stats h2').text(tiewins).effect('highlight');
             won = 1;
         }
 
