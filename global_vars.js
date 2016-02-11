@@ -10,4 +10,4 @@ var gameArea = [
 var gameAreaSize= 3;
 var player = 'x';
 
-
+var anarchyMode = 0;

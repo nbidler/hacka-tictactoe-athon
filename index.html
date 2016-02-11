@@ -17,7 +17,8 @@
     <script src="animation.js"></script>
 </head>
 <body>
-    <button data-toggle="modal" data-target="#game_board_size">Game Board Size</button>
+    <button data-toggle="modal" data-target="#game_board_size">Gameplay Options</button>
+    <button data-toggle="modal" data-target="#symbol_modal">Symbol Selector</button>
     <button data-toggle="modal" data-target="#about_modal">About</button>
     <button id="reset">Reset</button>
     <!--Game Board Area-->
@@ -114,13 +115,23 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Please Select a Game Board Size</h4>
+                    <h4 class="modal-title">Please Select your Gameplay Options</h4>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <input name='board' id='3x3' type="radio" value="3x3" checked> <span>3x3</span><br>
-                        <input name= 'board' id='5x5' type="radio" value="5x5"> <span>5x5</span>
-                    </form>
+                    <div class="col-xs-6">
+                        <h4>Game Board Size</h4>
+                        <form>
+                            <input name='board' id='3x3' type="radio" value="3x3" checked> <span>3x3</span><br>
+                            <input name= 'board' id='5x5' type="radio" value="5x5"> <span>5x5</span>
+                        </form>
+                    </div>
+                    <div class="col-xs-6">
+                        <h4>Gameplay Style</h4>
+                        <form>
+                            <input name='board' id='3x3' type="radio" value="3x3" checked> <span>Normal Mode</span><br>
+                            <input name= 'board' id='5x5' type="radio" value="5x5"> <span>Anarchy Mode</span>
+                        </form>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -138,6 +149,44 @@
                 </div>
                 <div class="modal-body">
                     <p>This game was created by the 3 best people on the planet: <br> Jaison Amos, Nicholas Bidler, and Stan Wielga.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Symbol Modal-->
+    <div id="symbol_modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Pick A Symbol</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Player 1</p>
+                    <form>
+                        <input id="player1_icon1" name="player1" type="radio" checked> <img width='50px' src="images/x.png"/>
+                        <input id="player1_icon2" name="player1" type="radio"> <img width='50px' src="images/o.png"/>
+                        <input id="player1_icon3" name="player1" type="radio"> <img width='50px' src="images/skull.png"/>
+                        <input id="player1_icon4" name="player1" type="radio"> <img width='50px' src="images/bunny.png"/>
+                        <input id="player1_icon5" name="player1" type="radio"> <img width='50px' src="images/Pokeball.png"/>
+                        <input id="player1_icon6" name="player1" type="radio"> <img width='50px' src="images/toad.png"/>
+                        <input id="player1_icon7" name="player1" type="radio"> <img width='50px' src="images/fawks.png"/>
+                        <input id="player1_icon8" name="player1" type="radio"> <img width='50px' src="images/java.png"/> <br>
+                    </form>
+                    <p>Player 2</p>
+                    <form>
+                        <input id="player2_icon1" name="player2" type="radio"> <img width='50px' src="images/x.png"/>
+                        <input id="player2_icon2" name="player2" type="radio" checked> <img width='50px' src="images/o.png"/>
+                        <input id="player2_icon3" name="player2" type="radio"> <img width='50px' src="images/skull.png"/>
+                        <input id="player2_icon4" name="player2" type="radio"> <img width='50px' src="images/bunny.png"/>
+                        <input id="player2_icon5" name="player2" type="radio"> <img width='50px' src="images/Pokeball.png"/>
+                        <input id="player2_icon6" name="player2" type="radio"> <img width='50px' src="images/toad.png"/>
+                        <input id="player2_icon7" name="player2" type="radio"> <img width='50px' src="images/fawks.png"/>
+                        <input id="player2_icon8" name="player2" type="radio"> <img width='50px' src="images/java.png"/> <br>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
