@@ -46,6 +46,7 @@ function addToIndex (position, player)
     }
     else if (gameAreaSize == 5) {
         switch (position) {
+            //row 1
             case 'square1':
                 gameArea[0][0] = player;
                 break;
@@ -60,6 +61,7 @@ function addToIndex (position, player)
                 break;
             case 'square5':
                 gameArea[0][4] = player;
+            //row 2
                 break;
             case 'square6':
                 gameArea[1][0] = player;
@@ -75,6 +77,7 @@ function addToIndex (position, player)
                 break;
             case 'square10':
                 gameArea[1][4] = player;
+            //row 3
                 break;
             case 'square11':
                 gameArea[2][0] = player;
@@ -91,6 +94,7 @@ function addToIndex (position, player)
             case 'square15':
                 gameArea[2][4] = player;
                 break;
+            //row 4
             case 'square16':
                 gameArea[3][0] = player;
                 break;
@@ -106,6 +110,7 @@ function addToIndex (position, player)
             case 'square20':
                 gameArea[3][4] = player;
                 break;
+            //rpw 5
             case 'square21':
                 gameArea[4][0] = player;
                 break;

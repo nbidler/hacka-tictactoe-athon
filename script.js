@@ -1,17 +1,24 @@
 $(document).ready(function () {
     console.log('doc loaded');
     $(".square3, .square5").click(function () {
-        if ($(this).hasClass('x') || $(this).hasClass('o')){
-            if (anarchyMode) // if anarchyMode is not 0
+        if (anarchyMode) // if anarchyMode is not 0
+        {
+            // 65% chance to take over clicked
+            if (Math.random() < 0.64)
             {
-                // 65% chance to over
-                if (Math.random() < 0.64)
+                //store the clicked item's classes
+                var currentClasses = $(this).attr('class');
+                //if the last class it has is the same as the current player's, do nothing
+                if (currentClasses.lastIndexOf(player) != currentClasses.length-1)
                 {
                     $(this).toggleClass('x');
                     $(this).toggleClass('o');
+                    addToIndex($(this).attr('id'), player);
                 }
-            }// otherwise, anarchyMode is off and continue as normal
-            else {
+            }
+        }// otherwise, anarchyMode is off and continue as normal
+        else {
+            if ($(this).hasClass('x') || $(this).hasClass('o')) {
                 $('.square_occupied').show();
                 setTimeout(function () {
                     $('.square_occupied').hide();
@@ -19,13 +26,13 @@ $(document).ready(function () {
                 console.log("already clicked");
                 return;
             }
+            console.log(this);
+
+            $(this).addClass(player);//mark the cell with the current player's mark
+
+            addToIndex($(this).attr('id'), player);//store the location of the click into your storage variable
+            console.log("player:" + player);
         }
-        console.log(this);
-
-        $(this).addClass(player);//mark the cell with the current player's mark
-
-        addToIndex($(this).attr('id'), player);//store the location of the click into your storage variable
-        console.log("player:"+player);
 
         var gameResult = checkWin();//check for win and increment the stat counters
         if (gameResult == 'w'){
@@ -38,7 +45,7 @@ $(document).ready(function () {
             }
         } else if (gameResult == 't'){
             tiewins++;
-            $('.tie_stats').text(tiewins);
+            $('.tie_stats h2').text(tiewins);
         }
         console.log('checked win '+ gameResult);
         square_clicked(player);//toggle the player to the next one after processing the click
