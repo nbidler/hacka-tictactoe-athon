@@ -18,11 +18,12 @@ $(document).ready(function () {
 
         $(this).addClass(player);//mark the cell with the current player's mark
 
+
         addToIndex($(this).attr('id'), player);//store the location of the click into your storage variable
         console.log("player:"+player);
 
-        //checkWin();//check for win and increment the stat counters
-        if (checkWin() == 'w'){
+        var gameResult = checkWin();//check for win and increment the stat counters
+        if (gameResult == 'w'){
             if (player == 'x'){
                 player1wins++;
                 $('.player_1_stat h2').text(player1wins);
@@ -32,15 +33,14 @@ $(document).ready(function () {
                 $('.player_2_stat h2').text(player2wins);
                 won = 1;
             }
-        } else if (checkWin() == 't'){
+        } else if (gameResult == 't'){
             tiewins++;
             $('.tie_stats h2').text(tiewins);
             won = 1;
         }
-            console.log('checked win '+ checkWin());
-            square_clicked(player);//toggle the player to the next one after processing the click
 
-
+        console.log('checked win '+ gameResult);
+        square_clicked(player);//toggle the player to the next one after processing the click
 
 
     });
@@ -85,7 +85,7 @@ $(document).ready(function () {
     });
     //This chunk of code is for selecting the symbols for player 1 and player 2, currently both player 1 and 2 can select the same symbol, but it will be fixed
     $('#player1_icon1').click(function(){
-        var style= $('<style>.x {background-image:url("images/x.png")}</style>');
+        var style= $('<style>.x {background-image:url("images/megaman.jpg")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon2').click(function(){
@@ -99,7 +99,7 @@ $(document).ready(function () {
     $('#player1_icon4').click(function(){
         var style= $('<style>.x {background-image:url("images/bunny.png")}</style>');
         $('html > head').append(style);
-    })
+    });
     $('#player1_icon5').click(function(){
         var style= $('<style>.x {background-image:url("images/Pokeball.png")}</style>');
         $('html > head').append(style);
@@ -118,7 +118,7 @@ $(document).ready(function () {
     });
 
     $('#player2_icon1').click(function(){
-        var style= $('<style>.o {background-image:url("images/x.png")}</style>');
+        var style= $('<style>.o {background-image:url("images/megaman.jpg")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon2').click(function(){
