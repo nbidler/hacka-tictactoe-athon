@@ -9,14 +9,8 @@ $(document).ready(function () {
 
         $(this).addClass(player);//mark the cell with the current player's mark
 
-        //mark the cell with the current player's mark
-
-
-
-
         addToIndex($(this).attr('id'), player);//store the location of the click into your storage variable
         console.log("player:"+player);
-
 
         //checkWin();//check for win
         console.log('checked win'+ checkWin());
