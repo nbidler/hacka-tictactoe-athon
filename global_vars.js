@@ -7,6 +7,6 @@ var gameArea = [
     ['7', '8', '9']
 ];
 
-var player = null;
+var player = 'x';
 
 
