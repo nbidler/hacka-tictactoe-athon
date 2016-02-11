@@ -52,14 +52,17 @@ body{
     left:25vw;
 }
 .x{
-    background-image: url("images/x.png");
+    background-image: url("images/bunny.png");
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 .o{
-    background-image: url("images/o.png");
+    background-image: url("images/Pokeball.png");
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+.modal-footer{
+    border-top: none;
 }

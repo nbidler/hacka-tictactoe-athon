@@ -23,7 +23,7 @@ $(document).ready(function () {
         console.log('reset clicked');
         reset();
     });
-    //this checks if the user wants to be on a 3x3 or 5x5 game board, it also changes the gameArea array size
+    //this checks if the user wants to be on a 3x3 game board, it also changes the gameArea array size
     $('#3x3').click(function(){
         gameAreaSize = 3;
         $('.game_board3').css('display','block');
@@ -34,6 +34,7 @@ $(document).ready(function () {
             ['7', '8', '9']
         ];
     });
+    //this checks if the user wants to be on a 5x5 game board, it also changes the gameArea array size
 
     $('#5x5').click(function(){
         gameAreaSize = 5;
@@ -47,6 +48,60 @@ $(document).ready(function () {
             ['21','22', '23', '24', '25']
         ];
     });
+
+    $('#player1_icon1').click(function(){
+        console.log('clicked');
+        $('.x').css('background-image',url('images/x.png'));
+    });
+    $('#player1_icon2').click(function(){
+        $('.x').css("background-image","url(images/o.png)");
+
+    });
+    $('#player1_icon3').click(function(){
+        $('.x').css('background-image',url('images/skull.png'));
+
+    });
+    $('#player1_icon4').click(function(){
+
+    })
+    $('#player1_icon5').click(function(){
+
+    });
+    $('#player1_icon6').click(function(){
+
+    });
+    $('#player1_icon7').click(function(){
+
+    });
+    $('#player1_icon8').click(function(){
+
+    });
+
+    $('#player2_icon1').click(function(){
+
+    });
+    $('#player2_icon2').click(function(){
+
+    });
+    $('#player2_icon3').click(function(){
+
+    });
+    $('#player2_icon4').click(function(){
+
+    });
+    $('#player2_icon5').click(function(){
+
+    });
+    $('#player2_icon6').click(function(){
+
+    });
+    $('#player2_icon7').click(function(){
+
+    });
+    $('#player2_icon8').click(function(){
+
+    })
+
 });
 
 
