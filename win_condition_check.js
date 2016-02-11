@@ -14,12 +14,14 @@
 * WIN CONDITIONS -
 * 1. HORIZONTAL - all entries in an array are the same
 * 2. VERTICAL - all entries in the same index of different arrays are the same
-* 3. DIAGONAL - 0,0 + 1,1 + 2,2 OR 2,0 + 1,1 + 0,2 are the same - not sure about detecting dynamically
+* 3. DIAGONAL - all entries in at least one diagonal are the same
 * */
 function checkWin () {
+
+    //declare vars
     var anyMovesLeft = false;
     var lineCheck = false;
-    //  these assume gama area is square
+    //  these assume game area is square
     var rows = gameArea.length;
     var cols = gameArea[0].length;
     //

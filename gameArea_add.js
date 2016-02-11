@@ -11,8 +11,10 @@
 function addToIndex (position, player)
 {
     console.log('addToIndex start');
+    //depending on what size the game area is set to, use corresponding array size
     if (gameAreaSize == 3) {
         switch (position) {
+            //row 1
             case 'square1':
                 gameArea[0][0] = player;
                 break;
@@ -22,6 +24,7 @@ function addToIndex (position, player)
             case 'square3':
                 gameArea[0][2] = player;
                 break;
+            //row 2
             case 'square4':
                 gameArea[1][0] = player;
                 break;
@@ -31,6 +34,7 @@ function addToIndex (position, player)
             case 'square6':
                 gameArea[1][2] = player;
                 break;
+            //row 3
             case 'square7':
                 gameArea[2][0] = player;
                 break;
@@ -40,8 +44,9 @@ function addToIndex (position, player)
             case 'square9':
                 gameArea[2][2] = player;
                 break;
+            //error, nothing added to array
             default:
-                console.log('addToIndex unable to add entry to index');
+                console.log('addToIndex unable to add entry to index ' + position);
         }
     }
     else if (gameAreaSize == 5) {
@@ -127,8 +132,12 @@ function addToIndex (position, player)
                 gameArea[4][4] = player;
                 break;
             default:
-                console.log('addToIndex unable to add entry to index');
+                console.log('addToIndex unable to add entry to index ' + position);
         }
+    }
+    //if game size neither 3 or 5, error
+    else {
+        console.log('gameAreaSize not permitted option - ' + gameAreaSize);
     }
     console.log('addToIndex end');
 }
