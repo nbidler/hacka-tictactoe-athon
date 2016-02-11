@@ -137,9 +137,13 @@ $(document).ready(function () {
 function square_clicked(a){
     if (player=='x'){
         player = 'o';
+        $('.player2_turn').show();
+        $('.player1_turn').hide();
     }
     else {
         player = 'x';
+        $('.player1_turn').show();
+        $('.player2_turn').hide();
     }
     console.log("player:"+player);
 }

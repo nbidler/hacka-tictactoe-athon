@@ -22,6 +22,9 @@ h1{
     position:relative;
     bottom:7vh;
 }
+.player2_turn{
+    display:none;
+}
 .player1_turn_img{
     width:5vw;
     height:auto;
