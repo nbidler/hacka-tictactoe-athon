@@ -16,57 +16,98 @@
     <script src="animation.js"></script>
 </head>
 <body>
-<div class="container-fluid game_board">
-    <div class="row">
-        <div id="square1" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
-        <div id="square2" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
-        <div id="square3" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
-    </div>
-    <div class="row">
-        <div id="square4" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
-        <div id="square5" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
-        <div id="square6" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
-    </div>
-    <div class="row">
-        <div id="square7" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
-        <div id="square8" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
-        <div id="square9" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
-    </div>
-</div>
-    <div class="container-fluid">
+    <button data-toggle="modal" data-target="#game_board_size">Game Board Size</button>
+    <button data-toggle="modal" data-target="#about_modal">About</button>
+    <!--Game Board Area-->
+    <div class="container-fluid game_board">
         <div class="row">
-            <div class = 'col-xs-6 col-sm-6 col-md-6 col-lg-6 x-test'></div>
-            <div class = 'col-xs-6 col-sm-6 col-md-6 col-lg-6 o-test'></div>
+            <div id="square1" class="col-xs-4 square"></div>
+            <div id="square2" class="col-xs-4 square"></div>
+            <div id="square3" class="col-xs-4 square"></div>
+        </div>
+        <div class="row">
+            <div id="square4" class="col-xs-4 square"></div>
+            <div id="square5" class="col-xs-4 square"></div>
+            <div id="square6" class="col-xs-4 square"></div>
+        </div>
+        <div class="row">
+            <div id="square7" class="col-xs-4 square"></div>
+            <div id="square8" class="col-xs-4 square"></div>
+            <div id="square9" class="col-xs-4 square"></div>
         </div>
     </div>
-    <div class="container-fluid" id="stat_display">
-        <div class="row">
-            <div class ="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                <div class="container-fluid player1_turn">
-                    <h1>Your Turn!</h1>
-                    <img class ='player1_turn_img' src="images/curved_arrow.png"/>
-                </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class = 'col-xs-6 x-test'></div>
+                <div class = 'col-xs-6 o-test'></div>
             </div>
-            <div class ="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="stat_box">
-                <div class="row">
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 player_1_stat">
-                        <h1>Player 1</h1>
-                        <h2>0</h2>
-                    </div>
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                        <h1>Tie</h1>
-                        <h2>0</h2>
-                    </div>
-                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 player_2_stat">
-                        <h1>Player 2</h1>
-                        <h2>0</h2>
+        </div>
+    <!--Stat's Display Area-->
+        <div class="container-fluid" id="stat_display">
+            <div class="row">
+                <div class ="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                    <div class="container-fluid player1_turn">
+                        <h1>Your Turn!</h1>
+                        <img class ='player1_turn_img' src="images/curved_arrow.png"/>
                     </div>
                 </div>
+                <div class ="col-xs-8" id="stat_box">
+                    <div class="row">
+                        <div class="col-xs-4 player_1_stat">
+                            <h1>Player 1</h1>
+                            <h1>0</h1>
+                        </div>
+                        <div class="col-xs-4">
+                            <h1>Tie</h1>
+                            <h1>0</h1>
+                        </div>
+                        <div class="col-xs-4 player_2_stat">
+                            <h1>Player 2</h1>
+                            <h1>0</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class ="col-xs-2">
+                    <div class="container-fluid player2_turn">
+                        <h1>Your Turn!</h1>
+                        <img class = 'player2_turn_img' src="images/curved_arrow.png"/>
+                    </div>
+                </div>
             </div>
-            <div class ="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                <div class="container-fluid player2_turn">
-                    <h1>Your Turn!</h1>
-                    <img class = 'player2_turn_img' src="images/curved_arrow.png"/>
+        </div>
+    <!-- Game Board Size Modal -->
+    <div id="game_board_size" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Please Select a Game Board Size</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input type="radio" value="3x3" checked> <span>3x3</span><br>
+                        <input type="radio" value="5x5"> <span>5x5</span>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Modal -->
+    <div id="about_modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">About the Best Tic-Tac-Toe Game Ever</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This game was created by the 3 best people on the planet: <br> Jaison Amos, Nicholas Bidler, and Stan Wielga.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

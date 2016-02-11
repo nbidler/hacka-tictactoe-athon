@@ -1,4 +1,6 @@
-
+h1{
+    font-size:2vw;
+}
 #stat_display{
     text-align: center;
     position:relative;
@@ -12,12 +14,16 @@
     height:20vh;
 }
 .player2_turn_img{
-    width:50px;
+    width:5vw;
     height:auto;
     transform:rotate(90deg);
 }
+.player1_turn, .player2_turn{
+    position:relative;
+    bottom:7vh;
+}
 .player1_turn_img{
-    width:50px;
+    width:5vw;
     height:auto;
     transform:rotate(270deg) scaleX(-1);
 }
@@ -36,10 +42,13 @@ body{
 }
 .x{
     background-image: url("images/x.png");
-    background-size:cover;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .o{
     background-image: url("images/o.png");
-    background-size:cover;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
