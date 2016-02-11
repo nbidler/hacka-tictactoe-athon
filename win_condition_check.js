@@ -5,7 +5,10 @@
 
 /*
 * checkWin
-* 0 params, 1 return - player who just moved won, false - continue playing
+* 0 params
+* 1 return - 'w' player who just made last move won,
+*   't' player made last move made last move available AND was not a win - ergo tie
+*       'c' - not matches and not last move - continue playing
 * reads from global array gameArea
 *
 * WIN CONDITIONS -
@@ -14,7 +17,7 @@
 * 3. DIAGONAL - 0,0 + 1,1 + 2,2 OR 2,0 + 1,1 + 0,2 are the same - not sure about detecting dynamically
 * */
 function checkWin () {
-    //var matchFound = false;
+    var anyMovesLeft = false;
     var lineCheck = false;
     //  these assume gama area is square
     var rows = gameArea.length;
@@ -25,11 +28,6 @@ function checkWin () {
     //  go through the array line by line
     for (var i =0; i < rows; i++)
     {
-        /*if (gameArea[i][0] == gameArea[i][1] == gameArea[i][2])
-        {
-            return gameArea[i][0];
-        }*/
-
         //the line matches unless two items aren't the same
         lineCheck = true;
         //  go through each row item by item
@@ -43,9 +41,9 @@ function checkWin () {
                 break;
             }
         }
-        //if no mismatches found, whole line matches, match found, return to
+        //if no mismatches found, whole line matches, match found, return
         if (lineCheck) {
-            return true;
+            return 'w';
         }
     }
 
@@ -70,7 +68,7 @@ function checkWin () {
         }
         //if no mismatches found, whole line matches, match found, return to
         if (lineCheck) {
-            return true;
+            return 'w';
         }
     }
 
@@ -85,7 +83,7 @@ function checkWin () {
             break;
         }
         if (lineCheck) {
-            return true;
+            return 'w';
         }
     }
 
@@ -106,7 +104,7 @@ function checkWin () {
         }
         //if no mismatches found, whole line matches, match found, return to
         if (lineCheck) {
-            return true;
+            return 'w';
         }
     }
 
@@ -120,7 +118,25 @@ function checkWin () {
     * RETURNS NULL IF TIE? MAYBE?
     * */
 
-    //if no player has made winning move, continue
-    return false;
     //if all possibilities checked and no match, game was tie
+    //  loop through all items in all arrays
+    //  assumes no moves left, if any unused space exists, there is 1+ moves left
+    for (var i =0; i < rows; i++)
+    {
+        for (var j = 0; j < cols; j++) {
+            //if current item is a number, there are moves left
+            if (!(gameArea[i][j].isNan()))
+            {
+                anyMovesLeft = true;
+            }
+        }
+    }
+    //if no moves are left, game is tie
+    if (!anyMovesLeft)
+    {
+        return 't';
+    }
+
+    //if no player has made winning move AND has not used last move, continue
+    return 'c';
 }
