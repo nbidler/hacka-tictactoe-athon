@@ -33,6 +33,7 @@ function checkWin () {
         //  go through each row item by item
         for (var j =1; j < cols; j++)
         {
+            console.log('check pair ' + gameArea[i][j-1] + ' ' + gameArea[i][j]);
             //loop through until something does not match
             if (gameArea[i][j-1] != gameArea[i][j])
             {
@@ -41,6 +42,7 @@ function checkWin () {
                 break;
             }
         }
+        console.log(lineCheck);
         //if no mismatches found, whole line matches, match found, return
         if (lineCheck) {
             return 'w';
@@ -58,6 +60,7 @@ function checkWin () {
         //  go through each row item by item
         for (var j =1; j < cols; j++)
         {
+            console.log('check pair ' + gameArea[j-1][i] + ' ' + gameArea[j][i]);
             //loop through until something does not match
             if (gameArea[j-1][i] != gameArea[j][i])
             {
@@ -66,6 +69,7 @@ function checkWin () {
                 break;
             }
         }
+        console.log(lineCheck);
         //if no mismatches found, whole line matches, match found, return to
         if (lineCheck) {
             return 'w';
@@ -76,15 +80,17 @@ function checkWin () {
     //DIAGONAL - TOP LEFT TO BOTTOM RIGHT
     for (var i = 1; i < rows; i++) {
         lineCheck = true;
+        console.log('check pair ' + gameArea[i-1][i-1] + ' ' + gameArea[i][i]);
         if (gameArea[i-1][i-1] != gameArea[i][i])
         {
             // mismatch found, line does not match, try next line
             lineCheck = false;
             break;
         }
-        if (lineCheck) {
-            return 'w';
-        }
+    }
+    console.log(lineCheck);
+    if (lineCheck) {
+        return 'w';
     }
 
     //DIAGONAL - TOP LEFT TO BOTTOM RIGHT
@@ -94,6 +100,7 @@ function checkWin () {
         //  go through each row item by item
         for (var j = cols-1; j >= 1; j--) {
             if ((i + j + 1) == rows) {
+                console.log('check pair ' + gameArea[i][j] + ' ' + gameArea[i+1][j-1]);
                 //loop through until something does not match
                 if (gameArea[i][j] != gameArea[i+1][j-1]) {
                     // mismatch found, line does not match, try next line
@@ -102,21 +109,15 @@ function checkWin () {
                 }
             }
         }
-        //if no mismatches found, whole line matches, match found, return to
-        if (lineCheck) {
-            return 'w';
+        if (!lineCheck) {
+            break;
         }
     }
-
-    /*
-    * SOMEHOW
-    * USE isNaN TO DETERMINE IF ANY NUMBERS LEFT
-    * IF ANY NUMBERS LEFT, NOT END OF GAME
-    * IF NO NUMBERS LEFT, END OF GAME WITH TIE
-    * RETURNS TRUE IF PREVIOUS MOVE WON THE GAME
-    * RETURNS FALSE IF GAME CONTINUES
-    * RETURNS NULL IF TIE? MAYBE?
-    * */
+    console.log(lineCheck);
+    //if no mismatches found, whole line matches, match found, return to
+    if (lineCheck) {
+        return 'w';
+    }
 
     //if all possibilities checked and no match, game was tie
     //  loop through all items in all arrays
@@ -125,7 +126,7 @@ function checkWin () {
     {
         for (var j = 0; j < cols; j++) {
             //if current item is a number, there are moves left
-            if (!(gameArea[i][j].isNan()))
+            if (!isNaN(gameArea[i][j]))
             {
                 anyMovesLeft = true;
             }
