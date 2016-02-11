@@ -9,25 +9,67 @@
     <script src="script.js"></script>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="animation.js"></script>
 </head>
 <body>
-<div class="container maincontainer">
-    <div class="row squarerow">
-        <div id="square1" class="square"></div>
-        <div id="square2" class="square"></div>
-        <div id="square3" class="square"></div>
+<div class="container-fluid game_board">
+    <div class="row">
+        <div id="square1" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
+        <div id="square2" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
+        <div id="square3" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
     </div>
-    <div class="row squarerow">
-        <div id="square4" class="square"></div>
-        <div id="square5" class="square"></div>
-        <div id="square6" class="square"></div>
-
+    <div class="row">
+        <div id="square4" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
+        <div id="square5" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
+        <div id="square6" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
     </div>
-    <div class="row squarerow">
-        <div id="square7" class="square"></div>
-        <div id="square8" class="square"></div>
-        <div id="square9" class="square"></div>
+    <div class="row">
+        <div id="square7" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
+        <div id="square8" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
+        <div id="square9" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 square"></div>
     </div>
 </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class = 'col-xs-6 col-sm-6 col-md-6 col-lg-6 x-test'></div>
+            <div class = 'col-xs-6 col-sm-6 col-md-6 col-lg-6 o-test'></div>
+        </div>
+    </div>
+    <div class="container-fluid" id="stat_display">
+        <div class="row">
+            <div class ="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="container-fluid player1_turn">
+                    <h1>Your Turn!</h1>
+                    <img class ='player1_turn_img' src="images/curved_arrow.png"/>
+                </div>
+            </div>
+            <div class ="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="stat_box">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 player_1_stat">
+                        <h1>Player 1</h1>
+                        <h2>0</h2>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <h1>Tie</h1>
+                        <h2>0</h2>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 player_2_stat">
+                        <h1>Player 2</h1>
+                        <h2>0</h2>
+                    </div>
+                </div>
+            </div>
+            <div class ="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="container-fluid player2_turn">
+                    <h1>Your Turn!</h1>
+                    <img class = 'player2_turn_img' src="images/curved_arrow.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
