@@ -10,19 +10,28 @@ $(document).ready(function () {
 
         if (anarchyMode) // if anarchyMode is not 0
         {
-            if
-            // 65% chance to take over clicked
-            if (Math.random() < 0.64)
+            //if already selected by a player
+            if ( $(this).hasClass('x') || $(this).hasClass('o'))
             {
-                //store the clicked item's classes
-                var currentClasses = $(this).attr('class');
-                //if the last class it has is the same as the current player's, do nothing
-                if (currentClasses.lastIndexOf(player) != currentClasses.length-1)
+                // 65% chance to take over clicked
+                if (Math.random() < 0.64)
                 {
-                    $(this).toggleClass('x');
-                    $(this).toggleClass('o');
-                    addToIndex($(this).attr('id'), player);
+                    //if does not have the player's class, steal
+                    if (!($(this).hasClass(player)))
+                    {
+                        $(this).toggleClass('x');
+                        $(this).toggleClass('o');
+                        addToIndex($(this).attr('id'), player);
+                    }
                 }
+                //if already has player's class OR unlucky, do nothing/lose turn
+            }
+            //if unclaimed, take square normally
+            else {
+                console.log(this);
+                $(this).addClass(player);//mark the cell with the current player's mark
+                addToIndex($(this).attr('id'), player);//store the location of the click into your storage variable
+                console.log("player:" + player);
             }
         }// otherwise, anarchyMode is off and continue as normal
         else {
