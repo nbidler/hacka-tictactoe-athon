@@ -34,7 +34,7 @@ $(document).ready(function () {
             }
         } else if (checkWin() == 't'){
             tiewins++;
-            $('.tie_stats').text(tiewins);
+            $('.tie_stats h2').text(tiewins);
             won = 1;
         }
             console.log('checked win '+ checkWin());
@@ -73,6 +73,15 @@ $(document).ready(function () {
             ['16','17', '18', '19', '20'],
             ['21','22', '23', '24', '25']
         ];
+    });
+
+    $('#normal').click(function(){
+       anarchyMode = 0;
+        console.log('anarchymode= ' +anarchyMode);
+    });
+    $('#anarchy').click(function(){
+        anarchyMode = 1;
+        console.log('anarchymode= ' +anarchyMode);
     });
     //This chunk of code is for selecting the symbols for player 1 and player 2, currently both player 1 and 2 can select the same symbol, but it will be fixed
     $('#player1_icon1').click(function(){
