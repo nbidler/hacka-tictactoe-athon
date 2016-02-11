@@ -2,12 +2,23 @@ $(document).ready(function () {
     console.log('doc loaded');
     $(".square3, .square5").click(function () {
         if ($(this).hasClass('x') || $(this).hasClass('o')){
-            $('.square_occupied').show();
-            setTimeout(function(){
-                $('.square_occupied').hide();
-            },1500);
-            console.log("already clicked");
-            return;
+            if (anarchyMode) // if anarchyMode is not 0
+            {
+                // 65% chance to over
+                if (Math.random() < 0.64)
+                {
+                    $(this).toggleClass('x');
+                    $(this).toggleClass('o');
+                }
+            }// otherwise, anarchyMode is off and continue as normal
+            else {
+                $('.square_occupied').show();
+                setTimeout(function () {
+                    $('.square_occupied').hide();
+                }, 1500);
+                console.log("already clicked");
+                return;
+            }
         }
         console.log(this);
 
