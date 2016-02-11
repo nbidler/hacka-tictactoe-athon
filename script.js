@@ -1,7 +1,12 @@
 $(document).ready(function () {
     console.log('doc loaded');
     $(".square3, .square5").click(function () {
-        if ($(this).hasClass('x') || $(this).hasClass('o')){
+        if (won == 1){
+            reset();
+            won = 0;
+            return;
+
+        }else if ($(this).hasClass('x') || $(this).hasClass('o')){
             $('.square_occupied').show();
             setTimeout(function(){
                 $('.square_occupied').hide();
@@ -21,16 +26,21 @@ $(document).ready(function () {
             if (player == 'x'){
                 player1wins++;
                 $('.player_1_stat h2').text(player1wins);
+                won = 1;
             } else {
                 player2wins++;
                 $('.player_2_stat h2').text(player2wins);
+                won = 1;
             }
         } else if (checkWin() == 't'){
             tiewins++;
             $('.tie_stats').text(tiewins);
+            won = 1;
         }
-        console.log('checked win '+ checkWin());
-        square_clicked(player);//toggle the player to the next one after processing the click
+            console.log('checked win '+ checkWin());
+            square_clicked(player);//toggle the player to the next one after processing the click
+
+
 
 
     });

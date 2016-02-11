@@ -125,7 +125,7 @@ function checkWin () {
     {
         for (var j = 0; j < cols; j++) {
             //if current item is a number, there are moves left
-            if (!(gameArea[i][j].isNan()))
+            if (!isNaN(gameArea[i][j]))
             {
                 anyMovesLeft = true;
             }
