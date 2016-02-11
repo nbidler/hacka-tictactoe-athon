@@ -15,14 +15,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css"/>
-    <script src="animation.js"></script>
 </head>
 <body>
 <div class=" col-xs-4 square_occupied">
     <h1>Square Occupied, Choose another Square or choose Anarchy Mode in Gameplay Options.</h1>
 </div>
-    <button data-toggle="modal" data-target="#game_board_size">Gameplay Options</button>
-    <button data-toggle="modal" data-target="#symbol_modal">Symbol Selector</button>
+    <button data-toggle="modal" data-target="#game_board_size">Gameplay<br>Options</button>
+    <button data-toggle="modal" data-target="#symbol_modal">Symbol<br>Selector</button>
     <button data-toggle="modal" data-target="#about_modal">About</button>
     <button id="reset">Reset</button>
     <!--Game Board Area-->
@@ -133,7 +132,7 @@
                         <h4>Gameplay Style</h4>
                         <form>
                             <input id='normal' name='board' type="radio" value="normal" checked> <span>Normal Mode</span><br>
-                            <input id='anarchy' name= 'board' type="radio" value="anarchy"> <span>Anarchy Mode</span>
+                            <input id='anarchy' name= 'board' type="radio" value="anarchy"> <span>Anarchy Mode:</span>  <br> In this mode, you can attempt to steal your opponent's spaces! There is a 65% chance of success, but if you fail, your turn is wasted!
                         </form>
                     </div>
                 </div>
