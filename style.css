@@ -38,17 +38,22 @@
     background-size:contain;
     transition:1s;
 }
+
 body{
     background-color: black;
 }
 .square {
     border: 3px solid black;
+    background-color: #FFE800;
     width: 20vw;
     height: 25vh;
-    background-color: #FF8E0F;
 }
+
 .game_board{
     position:absolute;
     left:20vw;
 }
+
+
+
 
