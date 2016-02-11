@@ -5,7 +5,8 @@ $(document).ready(function () {
         square_clicked(player);
         console.log("player:"+player);
 
-        if ((player == 'o' || player == 'x')){
+        if (($(this).hasClass('o') || ($(this).hasClass('x'))){
+            return
 
 
         }
