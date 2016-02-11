@@ -18,6 +18,33 @@ $(document).ready(function () {
 
 
     });
+    //This is the click handler that fires the reset function when the reset button is clicked
+    $('#reset').click(function(){
+        console.log('reset clicked');
+        reset();
+    });
+    //this checks if the user wants to be on a 3x3 or 5x5 game board, it also changes the gameArea array size
+    $('#3x3').click(function(){
+        $('.game_board3').css('display','block');
+        $('.game_board5').css('display','none');
+        gameArea = [
+            ['1', '2', '3'],
+            ['4', '5', '6'],
+            ['7', '8', '9']
+        ];
+    });
+
+    $('#5x5').click(function(){
+        $('.game_board3').css('display','none');
+        $('.game_board5').css('display','block');
+        gameArea = [
+            ['1', '2', '3', '4', '5'],
+            ['6','7', '8', '9', '10'],
+            ['11','12', '13', '14', '15'],
+            ['16','17', '18', '19', '20'],
+            ['21','22', '23', '24', '25']
+        ];
+    });
 });
 
 
@@ -29,5 +56,15 @@ function square_clicked(a){
         player = 'x';
     }
     console.log("player:"+player);
+}
+//this is the reset function that resets the x and o classes and resets the gameArea Array
+function reset(){
+    console.log('reset recieved');
+    $('.square').removeClass('x o');
+    gameArea = [
+        ['1', '2', '3'],
+        ['4', '5', '6'],
+        ['7', '8', '9']
+    ];
 }
 
