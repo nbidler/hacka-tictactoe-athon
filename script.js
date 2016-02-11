@@ -1,8 +1,16 @@
 $(document).ready(function () {
     console.log('doc loaded');
     $(".square3, .square5").click(function () {
+        //if click after game won, reset game
+        if (won == 1) {
+            reset();
+            won = 0;
+            return;
+        }
+
         if (anarchyMode) // if anarchyMode is not 0
         {
+            if
             // 65% chance to take over clicked
             if (Math.random() < 0.64)
             {
@@ -27,9 +35,7 @@ $(document).ready(function () {
                 return;
             }
             console.log(this);
-
             $(this).addClass(player);//mark the cell with the current player's mark
-
             addToIndex($(this).attr('id'), player);//store the location of the click into your storage variable
             console.log("player:" + player);
         }
@@ -39,19 +45,23 @@ $(document).ready(function () {
             if (player == 'x'){
                 player1wins++;
                 $('.player_1_stat h2').text(player1wins);
+                won = 1;
             } else {
                 player2wins++;
                 $('.player_2_stat h2').text(player2wins);
+                won = 1;
             }
         } else if (gameResult == 't'){
             tiewins++;
             $('.tie_stats h2').text(tiewins);
+
+            won = 1;
         }
+
         console.log('checked win '+ gameResult);
         square_clicked(player);//toggle the player to the next one after processing the click
-
-
     });
+
     //This is the click handler that fires the reset function when the reset button is clicked
     $('#reset').click(function(){
         console.log('reset clicked');
@@ -82,9 +92,18 @@ $(document).ready(function () {
             ['21','22', '23', '24', '25']
         ];
     });
+
+    $('#normal').click(function(){
+       anarchyMode = 0;
+        console.log('anarchymode= ' +anarchyMode);
+    });
+    $('#anarchy').click(function(){
+        anarchyMode = 1;
+        console.log('anarchymode= ' +anarchyMode);
+    });
     //This chunk of code is for selecting the symbols for player 1 and player 2, currently both player 1 and 2 can select the same symbol, but it will be fixed
     $('#player1_icon1').click(function(){
-        var style= $('<style>.x {background-image:url("images/x.png")}</style>');
+        var style= $('<style>.x {background-image:url("images/megaman.jpg")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon2').click(function(){
@@ -98,7 +117,7 @@ $(document).ready(function () {
     $('#player1_icon4').click(function(){
         var style= $('<style>.x {background-image:url("images/bunny.png")}</style>');
         $('html > head').append(style);
-    })
+    });
     $('#player1_icon5').click(function(){
         var style= $('<style>.x {background-image:url("images/Pokeball.png")}</style>');
         $('html > head').append(style);
@@ -117,7 +136,7 @@ $(document).ready(function () {
     });
 
     $('#player2_icon1').click(function(){
-        var style= $('<style>.o {background-image:url("images/x.png")}</style>');
+        var style= $('<style>.o {background-image:url("images/megaman.jpg")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon2').click(function(){

@@ -7,11 +7,14 @@ var gameArea = [
     ['7', '8', '9']
 ];
 
+
 var gameAreaSize= 3;
 var player = 'x';
+
 
 var anarchyMode = 0;
 
 var player1wins = 0;
 var player2wins = 0;
 var tiewins = 0;
+var won = 0;
