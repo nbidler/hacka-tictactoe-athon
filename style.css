@@ -31,7 +31,7 @@ h1{
     transform:rotate(270deg) scaleX(-1);
 }
 body{
-    background-color: black;
+    background-image: url('')
 
 
 }
@@ -59,7 +59,7 @@ body{
     left:25vw;
 }
 .x{
-    background-image: url("images/x.png");
+    background-image: url("images/battletoads.png");
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -75,7 +75,7 @@ body{
 }
 
 .o{
-    background-image: url("images/o.png");
+    background-image: url("images/contra.png");
     transform: rotate3D(0,1,0,180deg);
     background-size:contain;
     background-repeat: no-repeat;
