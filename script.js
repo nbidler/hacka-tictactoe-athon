@@ -5,8 +5,8 @@ $(document).ready(function () {
         square_clicked(player);
         console.log("player:"+player);
 
-        if (($(this).hasClass('o') || ($(this).hasClass('x'))){
-            return
+        if (($(this).hasClass(player))){
+            return;
 
 
         }
