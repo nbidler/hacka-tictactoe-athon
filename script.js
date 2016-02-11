@@ -38,10 +38,10 @@ $(document).ready(function () {
         }// otherwise, anarchyMode is off and continue as normal
         else {
             if ($(this).hasClass('x') || $(this).hasClass('o')) {
-                $('.square_occupied').effect('drop');
+                $('.square_occupied').show( "drop", {direction: "up"});
                 setTimeout(function () {
-                    $('.square_occupied').effect('drop');
-                }, 1500);
+                    $('.square_occupied').hide('drop',{direction:'right'});
+                }, 3000);
                 console.log("already clicked");
                 return;
             }
