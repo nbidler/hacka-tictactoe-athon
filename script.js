@@ -6,7 +6,7 @@ $(document).ready(function () {
             return;
         }
         console.log(this);
-        $(this).toggleClass('flipsquare');
+
         $(this).addClass(player);//mark the cell with the current player's mark
 
 
