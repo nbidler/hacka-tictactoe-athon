@@ -31,7 +31,7 @@ h1{
     transform:rotate(270deg) scaleX(-1);
 }
 body{
-    background-image: url('')
+    background: black;
 
 
 }
