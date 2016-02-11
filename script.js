@@ -75,6 +75,8 @@ $(document).ready(function () {
 
     //This is the click handler that fires the reset function when the reset button is clicked
     $('#reset').click(function(){
+        var reset = new Audio('Audio/reset.wav');
+        reset.play();
         console.log('reset clicked');
         reset();
     });
@@ -88,6 +90,8 @@ $(document).ready(function () {
             ['4', '5', '6'],
             ['7', '8', '9']
         ];
+        var three = new Audio('Audio/3.wav');
+        three.play();
     });
     //this checks if the user wants to be on a 5x5 game board, it also changes the gameArea array size
 
@@ -102,15 +106,21 @@ $(document).ready(function () {
             ['16','17', '18', '19', '20'],
             ['21','22', '23', '24', '25']
         ];
+        var five = new Audio('Audio/5.wav');
+        five.play();
     });
 
     $('#normal').click(function(){
        anarchyMode = 0;
         console.log('anarchymode= ' +anarchyMode);
+        var normal = new Audio('Audio/normal.wav');
+        normal.play();
     });
     $('#anarchy').click(function(){
         anarchyMode = 1;
         console.log('anarchymode= ' +anarchyMode);
+        var anarchy = new Audio('Audio/anarchy.wav');
+        anarchy.play();
     });
     //This chunk of code is for selecting the symbols for player 1 and player 2, currently both player 1 and 2 can select the same symbol, but it will be fixed
     $('#player1_icon1').click(function(){
