@@ -1,21 +1,23 @@
+//ON DOCUMENT LOAD
 $(document).ready(function () {
     console.log('doc loaded');
+
+    //when a square on either board is clicked
     $(".square3, .square5").click(function () {
-        //if click after game won, reset game
+
+        //if clicked after game is won, reset the game
         if (won == 1) {
             reset();
             won = 0;
             return;
         }
 
-        if (anarchyMode) // if anarchyMode is not 0
+        if (anarchyMode) // if anarchyMode is not 0, i.e. on
         {
-
-            //if already selected by a player
+            //if clicked square is already selected by a player
             if ( $(this).hasClass('x') || $(this).hasClass('o'))
-
             {
-                // 65% chance to take over clicked
+                // there is 65% chance to take over clicked square
                 if (Math.random() < 0.64)
                 {
                     //if does not have the player's class, steal
@@ -26,7 +28,7 @@ $(document).ready(function () {
                         addToIndex($(this).attr('id'), player);
                     }
                 }
-                //if already has player's class OR unlucky, do nothing/lose turn
+                //if already has player's class OR unlucky, do nothing/lose one turn
             }
             //if unclaimed, take square normally
             else {
@@ -37,11 +39,12 @@ $(document).ready(function () {
             }
         }// otherwise, anarchyMode is off and continue as normal
         else {
+            //if square was already claimed,
             if ($(this).hasClass('x') || $(this).hasClass('o')) {
-                $('.square_occupied').effect('drop');
+                $('.square_occupied').show( "drop", {direction: "right"});
                 setTimeout(function () {
-                    $('.square_occupied').effect('drop');
-                }, 1500);
+                    $('.square_occupied').hide('drop',{direction:'right'});
+                }, 3000);
                 console.log("already clicked");
                 return;
             }
@@ -101,7 +104,7 @@ $(document).ready(function () {
         $('.game_board5').css('display','block');
         gameArea = [
             ['1', '2', '3', '4', '5'],
-            ['6','7', '8', '9', '10'],
+            ['6', '7', '8', '9', '10'],
             ['11','12', '13', '14', '15'],
             ['16','17', '18', '19', '20'],
             ['21','22', '23', '24', '25']
@@ -112,15 +115,18 @@ $(document).ready(function () {
 
     $('#normal').click(function(){
        anarchyMode = 0;
-        console.log('anarchymode= ' +anarchyMode);
+
+        $('#anarchy_display').hide('drop',{direction:'left'});
         var normal = new Audio('Audio/normal.wav');
         normal.play();
     });
     $('#anarchy').click(function(){
         anarchyMode = 1;
-        console.log('anarchymode= ' +anarchyMode);
+        $('#anarchy_display').show('drop',{direction:'left'});
         var anarchy = new Audio('Audio/anarchy.wav');
         anarchy.play();
+
+
     });
     //This chunk of code is for selecting the symbols for player 1 and player 2, currently both player 1 and 2 can select the same symbol, but it will be fixed
     $('#player1_icon1').click(function(){
