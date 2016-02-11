@@ -7,6 +7,7 @@ var gameArea = [
     ['7', '8', '9']
 ];
 
+var gameAreaSize= 3;
 var player = 'x';
 
 
