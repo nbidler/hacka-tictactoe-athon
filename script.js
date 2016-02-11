@@ -48,70 +48,70 @@ $(document).ready(function () {
             ['21','22', '23', '24', '25']
         ];
     });
-
+    //This chunk of code is for selecting the symbols for player 1 and player 2, currently both player 1 and 2 can select the same symbol, but it will be fixed
     $('#player1_icon1').click(function(){
-        var style= $('<style>.x {background-image:url("images/x.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/x.png")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon2').click(function(){
-        var style= $('<style>.x {background-image:url("images/o.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/o.png")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon3').click(function(){
-        var style= $('<style>.x {background-image:url("images/skull.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/skull.png")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon4').click(function(){
-        var style= $('<style>.x {background-image:url("images/bunny.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/bunny.png")}</style>');
         $('html > head').append(style);
     })
     $('#player1_icon5').click(function(){
-        var style= $('<style>.x {background-image:url("images/Pokeball.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/Pokeball.png")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon6').click(function(){
-        var style= $('<style>.x {background-image:url("images/toad.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/toad.png")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon7').click(function(){
-        var style= $('<style>.x {background-image:url("images/fawks.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/fawks.png")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon8').click(function(){
-        var style= $('<style>.x {background-image:url("images/java.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/java.png")}</style>');
         $('html > head').append(style);
     });
 
     $('#player2_icon1').click(function(){
-        var style= $('<style>.o {background-image:url("images/x.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/x.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon2').click(function(){
-        var style= $('<style>.o {background-image:url("images/o.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/o.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon3').click(function(){
-        var style= $('<style>.o {background-image:url("images/skull.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/skull.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon4').click(function(){
-        var style= $('<style>.o {background-image:url("images/bunny.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/bunny.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon5').click(function(){
-        var style= $('<style>.o {background-image:url("images/Pokeball.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/Pokeball.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon6').click(function(){
-        var style= $('<style>.o {background-image:url("images/toad.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/toad.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon7').click(function(){
-        var style= $('<style>.o {background-image:url("images/fawks.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/fawks.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon8').click(function(){
-        var style= $('<style>.o {background-image:url("images/java.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/java.png")}</style>');
         $('html > head').append(style);
     })
 
