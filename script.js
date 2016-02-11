@@ -2,6 +2,10 @@ $(document).ready(function () {
     console.log('doc loaded');
     $(".square3, .square5").click(function () {
         if ($(this).hasClass('x') || $(this).hasClass('o')){
+            $('.square_occupied').show();
+            setTimeout(function(){
+                $('.square_occupied').hide();
+            },1500);
             console.log("already clicked");
             return;
         }
@@ -12,8 +16,20 @@ $(document).ready(function () {
         addToIndex($(this).attr('id'), player);//store the location of the click into your storage variable
         console.log("player:"+player);
 
-        //checkWin();//check for win
-        console.log('checked win'+ checkWin());
+        //checkWin();//check for win and increment the stat counters
+        if (checkWin() == 'w'){
+            if (player == 'x'){
+                player1wins++;
+                $('.player_1_stat h2').text(player1wins);
+            } else {
+                player2wins++;
+                $('.player_2_stat h2').text(player2wins);
+            }
+        } else if (checkWin() == 't'){
+            tiewins++;
+            $('.tie_stats').text(tiewins);
+        }
+        console.log('checked win '+ checkWin());
         square_clicked(player);//toggle the player to the next one after processing the click
 
 
@@ -48,70 +64,70 @@ $(document).ready(function () {
             ['21','22', '23', '24', '25']
         ];
     });
-
+    //This chunk of code is for selecting the symbols for player 1 and player 2, currently both player 1 and 2 can select the same symbol, but it will be fixed
     $('#player1_icon1').click(function(){
-        var style= $('<style>.x {background-image:url("images/x.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/x.png")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon2').click(function(){
-        var style= $('<style>.x {background-image:url("images/o.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/o.png")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon3').click(function(){
-        var style= $('<style>.x {background-image:url("images/skull.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/skull.png")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon4').click(function(){
-        var style= $('<style>.x {background-image:url("images/bunny.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/bunny.png")}</style>');
         $('html > head').append(style);
     })
     $('#player1_icon5').click(function(){
-        var style= $('<style>.x {background-image:url("images/Pokeball.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/Pokeball.png")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon6').click(function(){
-        var style= $('<style>.x {background-image:url("images/toad.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/toad.png")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon7').click(function(){
-        var style= $('<style>.x {background-image:url("images/fawks.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/fawks.png")}</style>');
         $('html > head').append(style);
     });
     $('#player1_icon8').click(function(){
-        var style= $('<style>.x {background-image:url("images/java.png")}</style>')
+        var style= $('<style>.x {background-image:url("images/java.png")}</style>');
         $('html > head').append(style);
     });
 
     $('#player2_icon1').click(function(){
-        var style= $('<style>.o {background-image:url("images/x.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/x.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon2').click(function(){
-        var style= $('<style>.o {background-image:url("images/o.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/o.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon3').click(function(){
-        var style= $('<style>.o {background-image:url("images/skull.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/skull.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon4').click(function(){
-        var style= $('<style>.o {background-image:url("images/bunny.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/bunny.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon5').click(function(){
-        var style= $('<style>.o {background-image:url("images/Pokeball.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/Pokeball.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon6').click(function(){
-        var style= $('<style>.o {background-image:url("images/toad.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/toad.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon7').click(function(){
-        var style= $('<style>.o {background-image:url("images/fawks.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/fawks.png")}</style>');
         $('html > head').append(style);
     });
     $('#player2_icon8').click(function(){
-        var style= $('<style>.o {background-image:url("images/java.png")}</style>')
+        var style= $('<style>.o {background-image:url("images/java.png")}</style>');
         $('html > head').append(style);
     })
 
@@ -121,9 +137,13 @@ $(document).ready(function () {
 function square_clicked(a){
     if (player=='x'){
         player = 'o';
+        $('.player2_turn').show();
+        $('.player1_turn').hide();
     }
     else {
         player = 'x';
+        $('.player1_turn').show();
+        $('.player2_turn').hide();
     }
     console.log("player:"+player);
 }

@@ -22,6 +22,9 @@ h1{
     position:relative;
     bottom:7vh;
 }
+.player2_turn{
+    display:none;
+}
 .player1_turn_img{
     width:5vw;
     height:auto;
@@ -65,4 +68,14 @@ body{
 }
 .modal-footer{
     border-top: none;
+}
+.square_occupied{
+    font-size:1vw;
+    position:absolute;
+    border-radius:50%;
+    right:0;
+    background-color:red;
+    z-index:1;
+    text-align:center;
+    display:none;
 }
