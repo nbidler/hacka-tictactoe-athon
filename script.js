@@ -110,10 +110,14 @@ $(document).ready(function () {
     $('#normal').click(function(){
        anarchyMode = 0;
         $('#anarchy_display').hide('drop',{direction:'left'});
+        $('.anarchy_info').hide('drop',{direction:'right'});
+
     });
     $('#anarchy').click(function(){
         anarchyMode = 1;
         $('#anarchy_display').show('drop',{direction:'left'});
+        $('.anarchy_info').show('drop',{direction:'right'});
+
 
     });
     //This chunk of code is for selecting the symbols for player 1 and player 2, currently both player 1 and 2 can select the same symbol, but it will be fixed
