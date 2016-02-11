@@ -38,7 +38,7 @@ $(document).ready(function () {
         }// otherwise, anarchyMode is off and continue as normal
         else {
             if ($(this).hasClass('x') || $(this).hasClass('o')) {
-                $('.square_occupied').show( "drop", {direction: "up"});
+                $('.square_occupied').show( "drop", {direction: "right"});
                 setTimeout(function () {
                     $('.square_occupied').hide('drop',{direction:'right'});
                 }, 3000);
@@ -106,11 +106,12 @@ $(document).ready(function () {
 
     $('#normal').click(function(){
        anarchyMode = 0;
-        console.log('anarchymode= ' +anarchyMode);
+        $('#anarchy_display').hide('drop',{direction:'left'});
     });
     $('#anarchy').click(function(){
         anarchyMode = 1;
-        console.log('anarchymode= ' +anarchyMode);
+        $('#anarchy_display').show('drop',{direction:'left'});
+
     });
     //This chunk of code is for selecting the symbols for player 1 and player 2, currently both player 1 and 2 can select the same symbol, but it will be fixed
     $('#player1_icon1').click(function(){
