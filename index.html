@@ -19,30 +19,62 @@
 <body>
     <button data-toggle="modal" data-target="#game_board_size">Game Board Size</button>
     <button data-toggle="modal" data-target="#about_modal">About</button>
+    <button id="reset">Reset</button>
     <!--Game Board Area-->
-    <div class="container-fluid game_board">
+    <div class="container-fluid game_board3">
         <div class="row">
-            <div id="square1" class="col-xs-4 square"></div>
-            <div id="square2" class="col-xs-4 square"></div>
-            <div id="square3" class="col-xs-4 square"></div>
+            <div id="square1" class="col-xs-4 square3"></div>
+            <div id="square2" class="col-xs-4 square3"></div>
+            <div id="square3" class="col-xs-4 square3"></div>
         </div>
         <div class="row">
-            <div id="square4" class="col-xs-4 square"></div>
-            <div id="square5" class="col-xs-4 square"></div>
-            <div id="square6" class="col-xs-4 square"></div>
+            <div id="square4" class="col-xs-4 square3"></div>
+            <div id="square5" class="col-xs-4 square3"></div>
+            <div id="square6" class="col-xs-4 square3"></div>
         </div>
         <div class="row">
-            <div id="square7" class="col-xs-4 square"></div>
-            <div id="square8" class="col-xs-4 square"></div>
-            <div id="square9" class="col-xs-4 square"></div>
+            <div id="square7" class="col-xs-4 square3"></div>
+            <div id="square8" class="col-xs-4 square3"></div>
+            <div id="square9" class="col-xs-4 square3"></div>
         </div>
     </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class = 'col-xs-6 x-test'></div>
-                <div class = 'col-xs-6 o-test'></div>
-            </div>
+    <div class="container-fluid game_board5">
+        <div class="row">
+            <div id="square1" class="col-xs-4 square5"></div>
+            <div id="square2" class="col-xs-4 square5"></div>
+            <div id="square3" class="col-xs-4 square5"></div>
+            <div id="square4" class="col-xs-4 square5"></div>
+            <div id="square5" class="col-xs-4 square5"></div>
         </div>
+        <div class="row">
+            <div id="square6" class="col-xs-4 square5"></div>
+            <div id="square7" class="col-xs-4 square5"></div>
+            <div id="square8" class="col-xs-4 square5"></div>
+            <div id="square9" class="col-xs-4 square5"></div>
+            <div id="square10" class="col-xs-4 square5"></div>
+        </div>
+        <div class="row">
+            <div id="square11" class="col-xs-4 square5"></div>
+            <div id="square12" class="col-xs-4 square5"></div>
+            <div id="square13" class="col-xs-4 square5"></div>
+            <div id="square14" class="col-xs-4 square5"></div>
+            <div id="square15" class="col-xs-4 square5"></div>
+        </div>
+        <div class="row">
+            <div id="square16" class="col-xs-4 square5"></div>
+            <div id="square17" class="col-xs-4 square5"></div>
+            <div id="square18" class="col-xs-4 square5"></div>
+            <div id="square19" class="col-xs-4 square5"></div>
+            <div id="square20" class="col-xs-4 square5"></div>
+        </div>
+        <div class="row">
+            <div id="square21" class="col-xs-4 square5"></div>
+            <div id="square22" class="col-xs-4 square5"></div>
+            <div id="square23" class="col-xs-4 square5"></div>
+            <div id="square24" class="col-xs-4 square5"></div>
+            <div id="square25" class="col-xs-4 square5"></div>
+        </div>
+    </div>
     <!--Stat's Display Area-->
         <div class="container-fluid" id="stat_display">
             <div class="row">
@@ -86,8 +118,8 @@
                 </div>
                 <div class="modal-body">
                     <form>
-                        <input type="radio" value="3x3" checked> <span>3x3</span><br>
-                        <input type="radio" value="5x5"> <span>5x5</span>
+                        <input name='board' id='3x3' type="radio" value="3x3" checked> <span>3x3</span><br>
+                        <input name= 'board' id='5x5' type="radio" value="5x5"> <span>5x5</span>
                     </form>
                 </div>
                 <div class="modal-footer">
