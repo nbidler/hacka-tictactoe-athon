@@ -52,13 +52,13 @@ body{
     left:25vw;
 }
 .x{
-    background-image: url("images/bunny.png");
+    background-image: url("images/x.png");
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 .o{
-    background-image: url("images/Pokeball.png");
+    background-image: url("images/o.png");
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
