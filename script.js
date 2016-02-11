@@ -1,4 +1,4 @@
-$(document).ready(function () {
+/*$(document).ready(function () {
     $(".square").click(function () {
         console.log(this);
         $(this).addClass(player);
@@ -27,4 +27,4 @@ function square_clicked(a){
     console.log("player:"+player);
 
 
-}
+}*/
