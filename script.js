@@ -2,6 +2,10 @@ $(document).ready(function () {
     console.log('doc loaded');
     $(".square3, .square5").click(function () {
         if ($(this).hasClass('x') || $(this).hasClass('o')){
+            $('.square_occupied').show();
+            setTimeout(function(){
+                $('.square_occupied').hide();
+            },1500);
             console.log("already clicked");
             return;
         }
@@ -13,7 +17,7 @@ $(document).ready(function () {
         console.log("player:"+player);
 
         //checkWin();//check for win
-        console.log('checked win'+ checkWin());
+        console.log('checked win '+ checkWin());
         square_clicked(player);//toggle the player to the next one after processing the click
 
 

@@ -66,3 +66,13 @@ body{
 .modal-footer{
     border-top: none;
 }
+.square_occupied{
+    font-size:1vw;
+    position:absolute;
+    border-radius:50%;
+    right:0;
+    background-color:red;
+    z-index:1;
+    text-align:center;
+    display:none;
+}
