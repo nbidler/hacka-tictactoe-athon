@@ -39,6 +39,9 @@
 h1{
     font-size:2vw;
 }
+h2{
+    font-size:1.7vw;
+}
 #stat_display{
     text-align: center;
     position:relative;
@@ -63,10 +66,10 @@ h1{
     height:auto;
     transform:rotate(90deg);
 }
-.player1_turn, .player2_turn{
-    position:relative;
-    bottom:1vh;
-
+.player1_turn, .player2_turn {
+    position: relative;
+    color: blanchedalmond;
+    bottom: 1vh;
 }
 .player2_turn{
     display:none;
@@ -146,7 +149,9 @@ body{
     border-radius:30%;
 
 }
-
+.modal-header{
+    border-bottom:none;
+}
 .modal-footer{
     border-top: none;
 }
@@ -156,11 +161,22 @@ body{
     position:absolute;
     border-radius:50%;
     right:0;
-    background-color:red;
+    background-color:rosybrown;
+    border:5px solid dimgrey;
+    color:white;
     z-index:1;
     text-align:center;
     display:none;
 }
 #anarchy_display{
+    display:none;
+}
+.modal-header, .modal-body, .modal-footer{
+    background-color: #8FB3ff;
+    color:black;
+}
+.anarchy_info{
+    position:absolute;
+    right:1vw;
     display:none;
 }
