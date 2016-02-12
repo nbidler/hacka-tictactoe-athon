@@ -6,13 +6,16 @@
 }
 #side_button1{
     position: absolute;
-    left: 85%;
-    top: 250%;
+    left: 89%;
+    top: 245%;
+    height: 10vh;
 }
 #side_button2{
     position: absolute;
-    left: 80%;
-    top: 300%;
+    left: 82%;
+    top: 295%;
+    height: 10vh;
+    width: 6vw;
 }
 .select_buttons {
     background-color: #535353;
@@ -43,7 +46,7 @@ h2{
     border:5px solid olive;
     background-color: #8FB321;
     position: relative;
-    top:30px;
+    top:37px;
 }
 #stat_box > div{
     height:7vh;
@@ -92,7 +95,7 @@ body{
     left:22vw;
     border: 30px solid #948F9E;
     box-sizing: content-box;
-    border-radius:10%;
+    border-radius:5% 5% 10% 5%;
 }
 .game_board5{
     display:none;
@@ -100,7 +103,7 @@ body{
     left:23vw;
     top:0;
     border: 30px solid #948F9E;
-    border-radius:10%;
+    border-radius:5% 5% 10% 5%;
 }
 .x{
     background-image: url("images/battletoads.png");
@@ -120,6 +123,7 @@ body{
 }
 .o:hover {
     border-radius:30%;
+
 }
 .modal-header{
     border-bottom:none;
@@ -155,6 +159,6 @@ body{
 }
 #controller{
     position:absolute;
-    left:5vw;
-    top:45vh;
+    left:4vw;
+    top:37vh;
 }
