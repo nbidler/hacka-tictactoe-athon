@@ -130,125 +130,238 @@ $(document).ready(function () {
         $('.anarchy_info').show('drop',{direction:'right'});
         var anarchy = new Audio('Audio/anarchy.wav');
         anarchy.play();
-
-
-
     });
-    //This chunk of code is for selecting the symbols for player 1 and player 2, currently both player 1 and 2 can select the same symbol, but it will be fixed
+
     $('#player1_icon1').click(function(){
         detectIconUsed('player1');
         var style = $('<style>.x {background-image:url("images/battletoads.png")}</style>');
         $('html > head').append(style);
-        var battletoads = new Audio('Audio/battletoads.mp3');
+        battletoads = new Audio('Audio/battletoads.mp3');
         battletoads.play();
+        contra.pause();
+        duckhunt.pause();
+        kinghippo.pause();
+        mario.pause();
+        megaman.pause();
+        metroid.pause();
+        zelda.pause();
+
     });
     $('#player1_icon2').click(function(){
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/contra.png")}</style>');
         $('html > head').append(style);
-        var contra = new Audio('Audio/contra.mp3');
+        contra = new Audio('Audio/contra.mp3');
         contra.play();
+        battletoads.pause();
+        duckhunt.pause();
+        kinghippo.pause();
+        mario.pause();
+        megaman.pause();
+        metroid.pause();
+        zelda.pause();
+
+
     });
     $('#player1_icon3').click(function(){
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/duckhunt.png")}</style>');
         $('html > head').append(style);
-        var duckhunt = new Audio('Audio/duckhunt.mp3');
+        duckhunt = new Audio('Audio/duckhunt.mp3');
         duckhunt.play();
+        contra.pause();
+        battletoads.pause();
+        kinghippo.pause();
+        mario.pause();
+        megaman.pause();
+        metroid.pause();
+        zelda.pause();
     });
     $('#player1_icon4').click(function(){
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/kinghippo.png")}</style>');
         $('html > head').append(style);
-        var kinghippo = new Audio('Audio/kinghippo.mp3');
+        new Audio('Audio/kinghippo.mp3');
         kinghippo.play();
+        duckhunt.pause();
+        contra.pause();
+        battletoads.pause();
+        mario.pause();
+        megaman.pause();
+        metroid.pause();
+        zelda.pause();
     });
     $('#player1_icon5').click(function(){
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/link.png")}</style>');
         $('html > head').append(style);
-        var zelda = new Audio('Audio/zelda.mp3');
+        new Audio('Audio/zelda.mp3');
         zelda.play();
+        kinghippo.pause();
+        duckhunt.pause();
+        contra.pause();
+        battletoads.pause();
+        mario.pause();
+        megaman.pause();
+        metroid.pause();
+
     });
     $('#player1_icon6').click(function(){
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/mario.png")}</style>');
         $('html > head').append(style);
-        var mario = new Audio('Audio/mario.mp3');
+        new Audio('Audio/mario.mp3');
         mario.play();
+        zelda.pause();
+        kinghippo.pause();
+        duckhunt.pause();
+        contra.pause();
+        battletoads.pause();
+        megaman.pause();
+        metroid.pause();
     });
     $('#player1_icon7').click(function(){
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/megaman.png")}</style>');
         $('html > head').append(style);
-        var megaman = new Audio('Audio/megaman.mp3');
+        new Audio('Audio/megaman.mp3');
         megaman.play();
+        zelda.pause();
+        kinghippo.pause();
+        duckhunt.pause();
+        contra.pause();
+        battletoads.pause();
+        metroid.pause();
+        mario.pause();
     });
     $('#player1_icon8').click(function(){
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/metroid.png")}</style>');
         $('html > head').append(style);
-        var metroid = new Audio('Audio/metroid.mp3');
+        new Audio('Audio/metroid.mp3');
         metroid.play();
+        megaman.pause();
+        zelda.pause();
+        kinghippo.pause();
+        duckhunt.pause();
+        contra.pause();
+        battletoads.pause();
+        mario.pause();
     });
 
     $('#player2_icon1').click(function(){
         detectIconUsed('player2');
         var style = $('<style>.o {background-image:url("images/battletoads.png")}</style>');
         $('html > head').append(style);
-        var battletoads = new Audio('Audio/battletoads.mp3');
+        battletoads = new Audio('Audio/battletoads.mp3');
         battletoads.play();
+        contra.pause();
+        duckhunt.pause();
+        kinghippo.pause();
+        mario.pause();
+        megaman.pause();
+        metroid.pause();
+        zelda.pause();
     });
 
     $('#player2_icon2').click(function(){
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/contra.png")}</style>');
         $('html > head').append(style);
-        var contra = new Audio('Audio/contra.mp3');
+        contra = new Audio('Audio/contra.mp3');
         contra.play();
+        battletoads.pause();
+        duckhunt.pause();
+        kinghippo.pause();
+        mario.pause();
+        megaman.pause();
+        metroid.pause();
+        zelda.pause();
     });
 
     $('#player2_icon3').click(function(){
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/duckhunt.png")}</style>');
         $('html > head').append(style);
-        var duckhunt = new Audio('Audio/duckhunt.mp3');
+        duckhunt = new Audio('Audio/duckhunt.mp3');
         duckhunt.play();
+        contra.pause();
+        battletoads.pause();
+        kinghippo.pause();
+        mario.pause();
+        megaman.pause();
+        metroid.pause();
+        zelda.pause();
     });
     $('#player2_icon4').click(function(){
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/kinghippo.png")}</style>');
         $('html > head').append(style);
-        var kinghippo = new Audio('Audio/kinghippo.mp3');
+        new Audio('Audio/kinghippo.mp3');
         kinghippo.play();
+        duckhunt.pause();
+        contra.pause();
+        battletoads.pause();
+        mario.pause();
+        megaman.pause();
+        metroid.pause();
+        zelda.pause();
     });
     $('#player2_icon5').click(function(){
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/link.png")}</style>');
         $('html > head').append(style);
-        var zelda = new Audio('Audio/zelda.mp3');
+        new Audio('Audio/zelda.mp3');
         zelda.play();
+        kinghippo.pause();
+        duckhunt.pause();
+        contra.pause();
+        battletoads.pause();
+        mario.pause();
+        megaman.pause();
+        metroid.pause();
     });
     $('#player2_icon6').click(function(){
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/mario.png")}</style>');
         $('html > head').append(style);
-        var mario = new Audio('Audio/mario.mp3');
+        new Audio('Audio/mario.mp3');
         mario.play();
+        zelda.pause();
+        kinghippo.pause();
+        duckhunt.pause();
+        contra.pause();
+        battletoads.pause();
+        megaman.pause();
+        metroid.pause();
     });
     $('#player2_icon7').click(function(){
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/megaman.png")}</style>');
         $('html > head').append(style);
-        var megaman = new Audio('Audio/megaman.mp3');
+        new Audio('Audio/megaman.mp3');
         megaman.play();
+        zelda.pause();
+        kinghippo.pause();
+        duckhunt.pause();
+        contra.pause();
+        battletoads.pause();
+        metroid.pause();
+        mario.pause();
     });
     $('#player2_icon8').click(function(){
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/metroid.png")}</style>');
         $('html > head').append(style);
-        var metroid = new Audio('Audio/metroid.mp3');
+        new Audio('Audio/metroid.mp3');
         metroid.play();
+        megaman.pause();
+        zelda.pause();
+        kinghippo.pause();
+        duckhunt.pause();
+        contra.pause();
+        battletoads.pause();
+        mario.pause();
     })
 
 });

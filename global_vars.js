@@ -21,3 +21,12 @@ var player1wins = 0;
 var player2wins = 0;
 var tiewins = 0;
 var won = 0;
+var battletoads;
+var contra;
+var duckhunt;
+var kinghippo;
+var mario;
+var megaman;
+var metroid;
+var zelda;
+
