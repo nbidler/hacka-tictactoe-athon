@@ -136,7 +136,6 @@ $(document).ready(function () {
         detectIconUsed('player1');
         var style = $('<style>.x {background-image:url("images/battletoads.png")}</style>');
         $('html > head').append(style);
-        battletoads = new Audio('Audio/battletoads.mp3');
         battletoads.play();
         contra.pause();
         duckhunt.pause();
@@ -151,7 +150,6 @@ $(document).ready(function () {
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/contra.png")}</style>');
         $('html > head').append(style);
-        contra = new Audio('Audio/contra.mp3');
         contra.play();
         battletoads.pause();
         duckhunt.pause();
@@ -167,7 +165,6 @@ $(document).ready(function () {
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/duckhunt.png")}</style>');
         $('html > head').append(style);
-        duckhunt = new Audio('Audio/duckhunt.mp3');
         duckhunt.play();
         contra.pause();
         battletoads.pause();
@@ -181,7 +178,6 @@ $(document).ready(function () {
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/kinghippo.png")}</style>');
         $('html > head').append(style);
-        new Audio('Audio/kinghippo.mp3');
         kinghippo.play();
         duckhunt.pause();
         contra.pause();
@@ -195,7 +191,6 @@ $(document).ready(function () {
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/link.png")}</style>');
         $('html > head').append(style);
-        new Audio('Audio/zelda.mp3');
         zelda.play();
         kinghippo.pause();
         duckhunt.pause();
@@ -210,7 +205,6 @@ $(document).ready(function () {
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/mario.png")}</style>');
         $('html > head').append(style);
-        new Audio('Audio/mario.mp3');
         mario.play();
         zelda.pause();
         kinghippo.pause();
@@ -224,7 +218,6 @@ $(document).ready(function () {
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/megaman.png")}</style>');
         $('html > head').append(style);
-        new Audio('Audio/megaman.mp3');
         megaman.play();
         zelda.pause();
         kinghippo.pause();
@@ -238,7 +231,6 @@ $(document).ready(function () {
         detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/metroid.png")}</style>');
         $('html > head').append(style);
-        new Audio('Audio/metroid.mp3');
         metroid.play();
         megaman.pause();
         zelda.pause();
@@ -253,7 +245,6 @@ $(document).ready(function () {
         detectIconUsed('player2');
         var style = $('<style>.o {background-image:url("images/battletoads.png")}</style>');
         $('html > head').append(style);
-        battletoads = new Audio('Audio/battletoads.mp3');
         battletoads.play();
         contra.pause();
         duckhunt.pause();
@@ -268,7 +259,6 @@ $(document).ready(function () {
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/contra.png")}</style>');
         $('html > head').append(style);
-        contra = new Audio('Audio/contra.mp3');
         contra.play();
         battletoads.pause();
         duckhunt.pause();
@@ -283,7 +273,6 @@ $(document).ready(function () {
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/duckhunt.png")}</style>');
         $('html > head').append(style);
-        duckhunt = new Audio('Audio/duckhunt.mp3');
         duckhunt.play();
         contra.pause();
         battletoads.pause();
@@ -297,7 +286,6 @@ $(document).ready(function () {
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/kinghippo.png")}</style>');
         $('html > head').append(style);
-        new Audio('Audio/kinghippo.mp3');
         kinghippo.play();
         duckhunt.pause();
         contra.pause();
@@ -311,7 +299,6 @@ $(document).ready(function () {
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/link.png")}</style>');
         $('html > head').append(style);
-        new Audio('Audio/zelda.mp3');
         zelda.play();
         kinghippo.pause();
         duckhunt.pause();
@@ -325,7 +312,6 @@ $(document).ready(function () {
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/mario.png")}</style>');
         $('html > head').append(style);
-        new Audio('Audio/mario.mp3');
         mario.play();
         zelda.pause();
         kinghippo.pause();
@@ -339,7 +325,6 @@ $(document).ready(function () {
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/megaman.png")}</style>');
         $('html > head').append(style);
-        new Audio('Audio/megaman.mp3');
         megaman.play();
         zelda.pause();
         kinghippo.pause();
@@ -353,7 +338,6 @@ $(document).ready(function () {
         detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/metroid.png")}</style>');
         $('html > head').append(style);
-        new Audio('Audio/metroid.mp3');
         metroid.play();
         megaman.pause();
         zelda.pause();
