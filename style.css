@@ -2,40 +2,31 @@
     background-color: #A00454;
     color:white;
     border-radius: 50%;
+    position:absolute;
 }
-
 #side_button1{
     position: absolute;
-    left: 90%;
+    left: 85%;
     top: 250%;
 }
-
-
 #side_button2{
     position: absolute;
-    left: 85%;
+    left: 80%;
     top: 300%;
-
 }
-
 .select_buttons {
     background-color: #535353;
     color: white;
     border-radius: 20%;
     position: relative;
-    top: 75vh;
+    top: 79vh;
     left: 46vw;
-
-
+    z-index: 1;
 }
-
-
-
 .game_board3{
     position: relative;
     top: 1%;
 }
-
 h1{
     font-size:2vw;
 }
@@ -46,19 +37,16 @@ h2{
     text-align: center;
     position:relative;
     top:75vh;
-
 }
 #stat_box{
     box-sizing: border-box;
     border:5px solid olive;
     background-color: #8FB321;
     position: relative;
-    bottom: 12%;
-
+    top:30px;
 }
 #stat_box > div{
     height:7vh;
-
 
 }
 .player2_turn_img{
@@ -68,7 +56,6 @@ h2{
 }
 .player1_turn, .player2_turn {
     position: relative;
-    color: blanchedalmond;
     bottom: 1vh;
 }
 .player2_turn{
@@ -80,17 +67,11 @@ h2{
     transform:rotate(270deg) scaleX(-1);
 }
 body{
-
-    background-image: url('');
     background-color:#E3E3E3;
     position: relative;
-
-
-
 }
 .square3 {
     border: 3px solid olive;
-
     background-color: #8FB321;
     width: 17vw;
     height: 22vh;
@@ -99,7 +80,6 @@ body{
     margin: auto;
 }
 .square5 {
-
     border: 3px solid olive;
     background-color: #8FB321;
     width: 10vw;
@@ -109,18 +89,18 @@ body{
 }
 .game_board3{
     position:absolute;
-    left:20vw;
+    left:22vw;
     border: 30px solid #948F9E;
     box-sizing: content-box;
-
+    border-radius:10%;
 }
 .game_board5{
     display:none;
     position:absolute;
-    left:25vw;
-    border: 30px solid #948F9E
-
-
+    left:23vw;
+    top:0;
+    border: 30px solid #948F9E;
+    border-radius:10%;
 }
 .x{
     background-image: url("images/battletoads.png");
@@ -129,25 +109,17 @@ body{
     background-position: center;
     transform:  rotate3D(0,1,0,180deg);
 }
-
-.x:hover
-{
-
+.x:hover {
     border-radius:30%;
-
 }
-
 .o{
     background-image: url("images/contra.png");
     transform: rotate3D(0,1,0,180deg);
     background-size:contain;
     background-repeat: no-repeat;
 }
-
-.o:hover
-{
+.o:hover {
     border-radius:30%;
-
 }
 .modal-header{
     border-bottom:none;
@@ -155,7 +127,6 @@ body{
 .modal-footer{
     border-top: none;
 }
-
 .square_occupied{
     font-size:1vw;
     position:absolute;
@@ -170,6 +141,8 @@ body{
 }
 #anarchy_display{
     display:none;
+    position:absolute;
+    left:0;
 }
 .modal-header, .modal-body, .modal-footer{
     background-color: #8FB3ff;
@@ -179,4 +152,9 @@ body{
     position:absolute;
     right:1vw;
     display:none;
+}
+#controller{
+    position:absolute;
+    left:5vw;
+    top:45vh;
 }
