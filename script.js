@@ -78,8 +78,8 @@ $(document).ready(function () {
 
     //This is the click handler that fires the reset function when the reset button is clicked
     $('#reset').click(function(){
-        var reset = new Audio('Audio/reset.wav');
-        reset.play();
+        var resetSound = new Audio('Audio/reset.wav');
+        resetSound.play();
         console.log('reset clicked');
         reset();
     });
@@ -117,61 +117,73 @@ $(document).ready(function () {
        anarchyMode = 0;
 
         $('#anarchy_display').hide('drop',{direction:'left'});
+        $('.anarchy_info').hide('drop',{direction:'right'});
         var normal = new Audio('Audio/normal.wav');
         normal.play();
+
     });
     $('#anarchy').click(function(){
         anarchyMode = 1;
         $('#anarchy_display').show('drop',{direction:'left'});
+        $('.anarchy_info').show('drop',{direction:'right'});
         var anarchy = new Audio('Audio/anarchy.wav');
         anarchy.play();
+
 
 
     });
     //This chunk of code is for selecting the symbols for player 1 and player 2, currently both player 1 and 2 can select the same symbol, but it will be fixed
     $('#player1_icon1').click(function(){
-        var style= $('<style>.x {background-image:url("images/battletoads.png")}</style>');
+        detectIconUsed('player1');
+        var style = $('<style>.x {background-image:url("images/battletoads.png")}</style>');
         $('html > head').append(style);
         var battletoads = new Audio('Audio/battletoads.mp3');
         battletoads.play();
     });
     $('#player1_icon2').click(function(){
+        detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/contra.png")}</style>');
         $('html > head').append(style);
         var contra = new Audio('Audio/contra.mp3');
         contra.play();
     });
     $('#player1_icon3').click(function(){
+        detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/duckhunt.png")}</style>');
         $('html > head').append(style);
         var duckhunt = new Audio('Audio/duckhunt.mp3');
         duckhunt.play();
     });
     $('#player1_icon4').click(function(){
+        detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/kinghippo.png")}</style>');
         $('html > head').append(style);
         var kinghippo = new Audio('Audio/kinghippo.mp3');
         kinghippo.play();
     });
     $('#player1_icon5').click(function(){
+        detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/link.png")}</style>');
         $('html > head').append(style);
         var zelda = new Audio('Audio/zelda.mp3');
         zelda.play();
     });
     $('#player1_icon6').click(function(){
+        detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/mario.png")}</style>');
         $('html > head').append(style);
         var mario = new Audio('Audio/mario.mp3');
         mario.play();
     });
     $('#player1_icon7').click(function(){
+        detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/megaman.png")}</style>');
         $('html > head').append(style);
         var megaman = new Audio('Audio/megaman.mp3');
         megaman.play();
     });
     $('#player1_icon8').click(function(){
+        detectIconUsed('player1');
         var style= $('<style>.x {background-image:url("images/metroid.png")}</style>');
         $('html > head').append(style);
         var metroid = new Audio('Audio/metroid.mp3');
@@ -179,13 +191,15 @@ $(document).ready(function () {
     });
 
     $('#player2_icon1').click(function(){
-        var style= $('<style>.o {background-image:url("images/battletoads.png")}</style>');
+        detectIconUsed('player2');
+        var style = $('<style>.o {background-image:url("images/battletoads.png")}</style>');
         $('html > head').append(style);
         var battletoads = new Audio('Audio/battletoads.mp3');
         battletoads.play();
     });
 
     $('#player2_icon2').click(function(){
+        detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/contra.png")}</style>');
         $('html > head').append(style);
         var contra = new Audio('Audio/contra.mp3');
@@ -193,36 +207,42 @@ $(document).ready(function () {
     });
 
     $('#player2_icon3').click(function(){
+        detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/duckhunt.png")}</style>');
         $('html > head').append(style);
         var duckhunt = new Audio('Audio/duckhunt.mp3');
         duckhunt.play();
     });
     $('#player2_icon4').click(function(){
+        detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/kinghippo.png")}</style>');
         $('html > head').append(style);
         var kinghippo = new Audio('Audio/kinghippo.mp3');
         kinghippo.play();
     });
     $('#player2_icon5').click(function(){
+        detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/link.png")}</style>');
         $('html > head').append(style);
         var zelda = new Audio('Audio/zelda.mp3');
         zelda.play();
     });
     $('#player2_icon6').click(function(){
+        detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/mario.png")}</style>');
         $('html > head').append(style);
         var mario = new Audio('Audio/mario.mp3');
         mario.play();
     });
     $('#player2_icon7').click(function(){
+        detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/megaman.png")}</style>');
         $('html > head').append(style);
         var megaman = new Audio('Audio/megaman.mp3');
         megaman.play();
     });
     $('#player2_icon8').click(function(){
+        detectIconUsed('player2');
         var style= $('<style>.o {background-image:url("images/metroid.png")}</style>');
         $('html > head').append(style);
         var metroid = new Audio('Audio/metroid.mp3');
@@ -231,19 +251,53 @@ $(document).ready(function () {
 
 });
 
+/*
+detectIconUsed - check if player icon already selected
+    1 input -
+    0 output
+
+    detects which icon radio button is selected, stores ID
+    set all of other player's radio buttons to 'enabled'
+    using stored ID, target corresponding ID for other player to disable
+*/
+
+function detectIconUsed (play){
+
+    var target;
+
+    if (play == 'player1')
+    {
+        target = $('input:radio[name=player1]:checked').attr('id');
+        console.log(target);
+        target = target.substr(0,6) + '2' + target.substr(7);
+        console.log(target);
+        $('input[name=player2]').attr('disabled',false);
+        $('input[id=' + target + ']').attr('disabled',true);
+    }
+    else
+    {
+        target = $('input:radio[name=player2]:checked').attr('id');
+        console.log(target);
+        target = target.substr(0,6) + '1' + target.substr(7);
+        console.log(target);
+        $('input[name=player1]').attr('disabled',false);
+        $('input[id=' + target + ']').attr('disabled',true);
+    }
+}
+
 
 function square_clicked(a){
     if (player=='x'){
         player = 'o';
-        $('.player2_turn').show();
-        $('.player1_turn').hide();
+        $('.player2_turn').show('clip');
+        $('.player1_turn').hide('clip');
         var player1 = new Audio('Audio/player1.wav');
         player1.play();
     }
     else {
         player = 'x';
-        $('.player1_turn').show();
-        $('.player2_turn').hide();
+        $('.player1_turn').show('clip');
+        $('.player2_turn').hide('clip');
         var player2 = new Audio('Audio/player2.wav');
         player2.play();
 
