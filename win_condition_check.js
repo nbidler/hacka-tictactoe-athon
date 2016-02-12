@@ -22,8 +22,8 @@ function checkWin () {
     var anyMovesLeft = false;
     var lineCheck = false;
     //  these assume game area is square
-    var rows = gameArea.length;
-    var cols = gameArea[0].length;
+    var rows = gameArea.length;//3 arrays
+    var cols = gameArea[0].length;//3 game area [0]s
     //
 
     //HORIZONTAL CHECK
@@ -129,7 +129,8 @@ function checkWin () {
     {
         for (var j = 0; j < cols; j++) {
             //if current item is a number, there are moves left
-            if (!isNaN(gameArea[i][j]))
+            if (!isNaN(gameArea[i][j]))//game originally starts with numbers, if there are ono numbers left and
+            //if any more
             {
                 anyMovesLeft = true;
             }

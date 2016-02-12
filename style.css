@@ -120,6 +120,7 @@ body{
     transform: rotate3D(0,1,0,180deg);
     background-size:contain;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .o:hover {
     border-radius:30%;

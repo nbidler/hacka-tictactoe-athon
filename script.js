@@ -26,6 +26,7 @@ $(document).ready(function () {
                         $(this).toggleClass('x');
                         $(this).toggleClass('o');
                         addToIndex($(this).attr('id'), player);
+                        //marks player and calls add to index
                     }
                 }
                 //if already has player's class OR unlucky, do nothing/lose one turn
@@ -55,10 +56,10 @@ $(document).ready(function () {
         }
 
         var gameResult = checkWin();//check for win and increment the stat counters
-        if (gameResult == 'w'){
+        if (gameResult == 'w'){//returned from win check
             var winning = new Audio('Audio/winning.mp3');
             winning.play();
-            if (player == 'x'){
+            if (player == 'x'){//last player
                 player1wins++;
                 $('.player_1_stat h2').text(player1wins).effect('highlight').effect('highlight');
                 won = 1;
