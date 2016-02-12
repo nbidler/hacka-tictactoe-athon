@@ -78,8 +78,8 @@ $(document).ready(function () {
 
     //This is the click handler that fires the reset function when the reset button is clicked
     $('#reset').click(function(){
-        var reset = new Audio('Audio/reset.wav');
-        reset.play();
+        var resetSound = new Audio('Audio/reset.wav');
+        resetSound.play();
         console.log('reset clicked');
         reset();
     });
