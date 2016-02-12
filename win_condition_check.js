@@ -119,6 +119,7 @@ function checkWin () {
     //if no mismatches found, whole line matches, match found, return to
     if (lineCheck) {
         return 'w';
+
     }
 
     //if all possibilities checked and no match, game was tie

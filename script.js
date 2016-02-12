@@ -56,6 +56,8 @@ $(document).ready(function () {
 
         var gameResult = checkWin();//check for win and increment the stat counters
         if (gameResult == 'w'){
+            var winning = new Audio('Audio/winning.mp3');
+            winning.play();
             if (player == 'x'){
                 player1wins++;
                 $('.player_1_stat h2').text(player1wins).effect('highlight').effect('highlight');
