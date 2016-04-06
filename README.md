@@ -15,5 +15,16 @@ In the Friendly House version, players can choose a 3x3 grid or 5x5 grid.  They 
 8) Metroid
 
 They can also choose anarchy mode where a player can click on a space that was clicked by the opposing player.  That
-player has a 65% chance of changing that space to that of their own character.  If they are unsuccessul, they lose a
+player has a 65% chance of changing that space to that of their own character.  If they are unsuccessful, they lose a
 turn.
+
+# WHAT WAS LEARNED
+>   First major project working in a group on a tight timescale - learned about coordinating with group using GitHub,
+>
+
+# TO DO
+> Remake with Bootstrap CSS?
+> Remake with AngularJS routing - pull content from template file
+
+# ADDITIONAL FEATURES ADDED
+> None Yet
