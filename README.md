@@ -20,7 +20,7 @@ turn.
 
 # WHAT WAS LEARNED
 >   First major project working in a group on a tight timescale - learned about coordinating with group using GitHub,
->
+>   the importance of giving the right person the right job and playing to strengths, and budgeting available timme against project objectives.
 
 # TO DO
 > Remake with Bootstrap CSS?
